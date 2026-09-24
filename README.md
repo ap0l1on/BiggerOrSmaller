@@ -1,8 +1,14 @@
-# Outweigh — Which company is worth more?
+# Bigger or Smaller — Which company is worth more?
 
-A free endless game: guess whether the next company is bigger or smaller, and build your streak. Plus a 10-pair Daily Challenge, one attempt per day.
+A free showdown game: guess whether the next company is **▲ bigger** or **▼ smaller**, build your streak, and try the Daily 10 — same pairs for everyone, one attempt per day.
 
 Live URL: https://ap0l1on.github.io/BiggerOrSmaller/
+
+## Screenshots
+
+| Home | Mid-game | Game over |
+| --- | --- | --- |
+| ![Home](screenshots/home-360.png) | ![Mid-game](screenshots/game-768.png) | ![Game over](screenshots/gameover-1280.png) |
 
 ## How the values are made
 

@@ -36,11 +36,11 @@ function usdOf(name: string): number {
 }
 
 async function leftName(page) {
-  return (await page.locator("#card-left .company-name").textContent())?.trim() ?? "";
+  return (await page.locator("#panel-known .company-name").textContent())?.trim() ?? "";
 }
 
 async function rightName(page) {
-  return (await page.locator("#card-right .company-name").textContent())?.trim() ?? "";
+  return (await page.locator("#panel-mystery .company-name").textContent())?.trim() ?? "";
 }
 
 function isAppError(text: string): boolean {
@@ -59,16 +59,16 @@ test("3 right guesses then a wrong one ends the run", async ({ page }) => {
   page.on("pageerror", (e) => errors.push(String(e)));
   await serveFixture(page);
   await page.goto("/");
-  await page.getByRole("button", { name: "Play endless" }).click();
-  await expect(page.locator("#card-left .company-name")).not.toBeEmpty();
+  await page.locator("#btn-play").click();
+  await expect(page.locator("#panel-known .company-name")).not.toBeEmpty();
 
   for (let i = 0; i < 3; i++) {
     const l = await leftName(page);
     const r = await rightName(page);
     const correct = usdOf(r) > usdOf(l) ? "Bigger" : "Smaller";
     await page.getByRole("button", { name: new RegExp(correct, "i") }).click();
-    // wait for the next round (streak pill updates)
-    await expect(page.locator("#streak-pill")).toContainText(`Streak ${i + 1}`, { timeout: 5000 });
+    // wait for the next round (streak chip updates)
+    await expect(page.locator("#streak-num")).toHaveText(`${i + 1}`, { timeout: 8000 });
   }
 
   // Now deliberately answer wrong.
@@ -77,8 +77,9 @@ test("3 right guesses then a wrong one ends the run", async ({ page }) => {
   const wrong = usdOf(r) > usdOf(l) ? "Smaller" : "Bigger";
   await page.getByRole("button", { name: new RegExp(wrong, "i") }).click();
   await expect(page.locator("#sheet")).toBeVisible({ timeout: 8000 });
-  await expect(page.locator("#final-score")).toContainText("Score 3");
+  await expect(page.locator("#final-score")).toHaveText("3");
   await expect(page.locator("#final-pair")).toContainText("vs");
+  await expect(page.locator(".final-ratio")).toContainText("bigger than");
   expect(errors).toEqual([]);
 });
 
@@ -91,8 +92,8 @@ test("daily challenge locks after finishing", async ({ page }) => {
   await serveFixture(page);
   await page.goto("/");
   await page.evaluate(() => localStorage.clear());
-  await page.getByRole("button", { name: /Daily challenge/ }).click();
-  await expect(page.locator("#card-left .company-name")).not.toBeEmpty();
+  await page.locator("#btn-daily").click();
+  await expect(page.locator("#panel-known .company-name")).not.toBeEmpty();
 
   for (let i = 0; i < 10; i++) {
     const l = await leftName(page);
@@ -100,13 +101,14 @@ test("daily challenge locks after finishing", async ({ page }) => {
     const correct = usdOf(r) > usdOf(l) ? "Bigger" : "Smaller";
     await page.getByRole("button", { name: new RegExp(correct, "i") }).click();
     if (i < 9) {
-      await expect(page.locator("#mode-label")).toContainText(`Daily · ${i + 2}/10`, { timeout: 5000 });
+      await expect(page.locator("#mode-label")).toContainText(`DAILY ${i + 2}/10`, { timeout: 8000 });
     }
   }
   await expect(page.locator("#sheet")).toBeVisible({ timeout: 10000 });
   await expect(page.locator("#final-score")).toContainText("10/10");
+  await expect(page.locator("#final-grid")).toContainText("🟩");
 
   await page.goto("/");
-  await expect(page.getByRole("button", { name: /Done today/ })).toBeVisible();
+  await expect(page.locator("#daily-state")).toContainText("DONE");
   expect(errors).toEqual([]);
 });

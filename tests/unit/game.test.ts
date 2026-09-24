@@ -110,13 +110,14 @@ describe("daily challenge", () => {
 describe("share text", () => {
   it("matches the spec format", () => {
     expect(shareText(12, "example.com/")).toBe(
-      "Outweigh: 12 in a row 📈\nCan you beat it? example.com/",
+      "Bigger or Smaller: 12 in a row 📈\nexample.com/",
     );
   });
   it("formats the daily share", () => {
     const t = dailyShareText(7, 10, "2026-10-20", "🟩🟩🟥🟩🟩🟩🟩🟥🟩🟩", "example.com/");
-    expect(t).toContain("7/10");
-    expect(t).toContain("2026-10-20");
+    expect(t).toBe(
+      "Bigger or Smaller daily 2026-10-20: 7/10\n🟩🟩🟥🟩🟩🟩🟩🟥🟩🟩\nexample.com/",
+    );
   });
 });
 

@@ -1,4 +1,4 @@
-// Verifies the contrast ratios claimed in the design table.
+// Verifies the contrast ratios of the Bigger or Smaller dark palette.
 // Fails (exit 1) when any text pair is under 4.5:1 or any UI pair under 3:1.
 
 function hex(h) {
@@ -24,16 +24,19 @@ function ratio(a, b) {
 
 const checks = [
   // [fg, bg, min, label]
-  ["#111827", "#F6F7FB", 4.5, "text on bg"],
-  ["#111827", "#FFFFFF", 4.5, "text on surface"],
-  ["#5B6475", "#F6F7FB", 4.5, "muted on bg"],
-  ["#5B6475", "#FFFFFF", 4.5, "muted on surface"],
-  ["#FFFFFF", "#4338CA", 4.5, "white on accent (primary buttons)"],
-  ["#4338CA", "#FFFFFF", 4.5, "accent links on white"],
-  ["#15803D", "#FFFFFF", 4.5, "up on white"],
-  ["#15803D", "#F6F7FB", 4.5, "up on bg"],
-  ["#B91C1C", "#FFFFFF", 4.5, "down on white"],
-  ["#B91C1C", "#F6F7FB", 4.5, "down on bg"],
+  ["#F2F4F8", "#0B0E14", 4.5, "text on bg"],
+  ["#F2F4F8", "#131823", 4.5, "text on panel"],
+  ["#8A93A6", "#0B0E14", 4.5, "muted on bg"],
+  ["#8A93A6", "#131823", 4.5, "muted on panel"],
+  ["#22C55E", "#131823", 4.5, "up (bigger) on panel"],
+  ["#22C55E", "#0B0E14", 4.5, "up (bigger) on bg"],
+  ["#EF4444", "#131823", 4.5, "down (smaller) on panel"],
+  ["#EF4444", "#0B0E14", 4.5, "down (smaller) on bg"],
+  ["#FACC15", "#0B0E14", 4.5, "gold on bg"],
+  ["#FACC15", "#131823", 4.5, "gold on panel"],
+  ["#0B0E14", "#FACC15", 4.5, "dark on gold (share button)"],
+  ["#052E14", "#22C55E", 4.5, "dark on up fill (pressed)"],
+  ["#2A0707", "#EF4444", 4.5, "dark on down fill (pressed)"],
 ];
 
 let fail = 0;

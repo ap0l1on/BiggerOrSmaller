@@ -1,4 +1,4 @@
-import { STORAGE_PREFIX } from "./constants";
+import { LEGACY_STORAGE_PREFIX, STORAGE_PREFIX } from "./constants";
 
 /** localStorage wrapper: try/catch + schema checks. Hostile values reset cleanly. */
 
@@ -6,19 +6,39 @@ function key(name: string): string {
   return `${STORAGE_PREFIX}:${name}`;
 }
 
-function safeGet(keyName: string): string | null {
+function legacyKey(name: string): string {
+  return `${LEGACY_STORAGE_PREFIX}:${name}`;
+}
+
+function rawGet(fullKey: string): string | null {
   try {
     if (typeof localStorage === "undefined") return null;
-    return localStorage.getItem(key(keyName));
+    return localStorage.getItem(fullKey);
   } catch {
     return null;
   }
 }
 
-function safeSet(keyName: string, value: string): void {
+function safeGet(name: string): string | null {
+  // One-time carry-over from the pre-rename prefix; then it lives under bos:.
+  const current = rawGet(key(name));
+  if (current !== null) return current;
+  const old = rawGet(legacyKey(name));
+  if (old !== null) {
+    safeSet(name, old);
+    try {
+      localStorage.removeItem(legacyKey(name));
+    } catch {
+      // ignore
+    }
+  }
+  return old;
+}
+
+function safeSet(name: string, value: string): void {
   try {
     if (typeof localStorage === "undefined") return;
-    localStorage.setItem(key(keyName), value);
+    localStorage.setItem(key(name), value);
   } catch {
     // storage full / blocked — ignore, game still works in-memory
   }

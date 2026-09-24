@@ -162,6 +162,7 @@ export function nextBest(best: number, streak: number): number {
 /* ---------- daily challenge ---------- */
 
 export function dailySeed(dateISO: string): number {
+  // Salt frozen since launch: changing it would reshuffle every past daily.
   return hashSeed("outweigh-daily-" + dateISO);
 }
 
@@ -193,7 +194,7 @@ export function dailyScoreGrid(results: boolean[]): string {
 /* ---------- share ---------- */
 
 export function shareText(score: number, site: string): string {
-  return `${APP_NAME}: ${score} in a row ${SHARE_EMOJI_UP}\nCan you beat it? ${site}`;
+  return `${APP_NAME}: ${score} in a row ${SHARE_EMOJI_UP}\n${site}`;
 }
 
 export function dailyShareText(
@@ -203,7 +204,7 @@ export function dailyShareText(
   grid: string,
   site: string,
 ): string {
-  return `${APP_NAME} daily ${dateISO}: ${score}/${total}\n${grid}\nCan you beat it? ${site}`;
+  return `${APP_NAME} daily ${dateISO}: ${score}/${total}\n${grid}\n${site}`;
 }
 
 /* ---------- validation ---------- */

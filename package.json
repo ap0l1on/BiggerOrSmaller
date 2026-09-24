@@ -1,8 +1,8 @@
 {
-  "name": "outweigh",
-  "version": "0.1.0",
+  "name": "bigger-or-smaller",
+  "version": "0.2.0",
   "private": true,
-  "description": "Outweigh — an endless higher-or-lower game about company size.",
+  "description": "Bigger or Smaller — an endless higher-or-lower game about company size.",
   "type": "module",
   "scripts": {
     "dev": "vite",

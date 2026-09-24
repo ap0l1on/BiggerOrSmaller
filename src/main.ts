@@ -1,19 +1,18 @@
 import { APP_NAME, APP_TAGLINE, DAILY_COUNT, siteUrl } from "./constants";
 import { formatUSD } from "./format";
 import {
+  countryLabel,
   dailyPairs,
   dailyScoreGrid,
   dailyShareText,
+  hashSeed,
   isCorrect,
+  monogram,
   nextBest,
   nextRound,
   pushRecent,
   shareText,
   validateValues,
-  countryLabel,
-  countryToFlag,
-  monogram,
-  tileColor,
   type Company,
   type Guess,
 } from "./game";
@@ -62,6 +61,9 @@ const state: State = {
 };
 
 let dailyRounds: { left: Company; right: Company }[] = [];
+let vsTurns = 0;
+let teaserTimer = 0;
+let clockTimer = 0;
 
 function el<T extends HTMLElement>(id: string): T {
   const n = document.getElementById(id);
@@ -77,7 +79,7 @@ function todayISO(): string {
   return `${y}-${m}-${day}`;
 }
 
-function prefersReducedMotion(): boolean {
+function reducedMotion(): boolean {
   try {
     return (
       loadSettings().reducedMotion ||
@@ -88,20 +90,35 @@ function prefersReducedMotion(): boolean {
   }
 }
 
-/* ---------- count-up ---------- */
+function buzz(): void {
+  try {
+    if (typeof navigator !== "undefined" && "vibrate" in navigator) {
+      navigator.vibrate(10);
+    }
+  } catch {
+    // unsupported — ignore
+  }
+}
 
-function countUp(
-  node: HTMLElement,
-  from: number,
-  to: number,
-  done: () => void,
-): void {
-  if (prefersReducedMotion()) {
+/** Deep tint of the company's hashed colour for full-bleed panels. */
+export function panelTint(id: string): string {
+  const h = hashSeed(id) % 360;
+  return `hsl(${h} 55% 12%)`;
+}
+
+/* ---------- odometer count-up (800 ms) ---------- */
+
+function countUp(node: HTMLElement, from: number, to: number, done: () => void): void {
+  node.classList.remove("rolling");
+  if (reducedMotion()) {
     node.textContent = formatUSD(to);
     done();
     return;
   }
-  const dur = 700;
+  // force reflow so the roll animation restarts
+  void node.offsetWidth;
+  node.classList.add("rolling");
+  const dur = 800;
   const t0 = performance.now();
   function frame(t: number): void {
     const p = Math.min(1, (t - t0) / dur);
@@ -132,10 +149,10 @@ async function loadValues(): Promise<void> {
     state.items = settings.crypto ? d.items : d.items.filter((c) => !isCrypto(c));
     state.asOf = d.asOf;
     status.textContent = "";
+    buildTape();
     renderAll();
   } catch (err) {
-    status.textContent =
-      "Could not load market data. Check your connection and reload.";
+    status.textContent = "Could not load market data. Check your connection and reload.";
     void err;
   }
 }
@@ -148,34 +165,50 @@ function isCrypto(c: Company): boolean {
   );
 }
 
+/* ---------- ticker tape ---------- */
+
+function buildTape(): void {
+  const track = el("tape-track");
+  while (track.firstChild) track.removeChild(track.firstChild);
+  const top = [...state.items].sort((a, b) => b.usd - a.usd).slice(0, 24);
+  if (top.length === 0) return;
+  const frag = document.createDocumentFragment();
+  for (let copy = 0; copy < 2; copy++) {
+    top.forEach((c, i) => {
+      const s = document.createElement("span");
+      const prev = top[(i + 1) % top.length];
+      const dir = c.usd >= prev.usd ? "▲" : "▼";
+      const cls = c.usd >= prev.usd ? "tk-up" : "tk-down";
+      const sym = document.createElement("span");
+      sym.className = "tk-sym";
+      sym.textContent = ` ${c.id.replace("-USD", "")} ${formatUSD(c.usd)} `;
+      const arrow = document.createElement("span");
+      arrow.className = cls;
+      arrow.textContent = dir;
+      const sep = document.createElement("span");
+      sep.textContent = " · ";
+      s.appendChild(sym);
+      s.appendChild(arrow);
+      s.appendChild(sep);
+      frag.appendChild(s);
+    });
+  }
+  track.appendChild(frag);
+}
+
 /* ---------- rendering ---------- */
 
 function setScreen(name: Mode): void {
   state.mode = name;
-  (document.querySelectorAll(".nav-btn") as unknown as HTMLElement[]).forEach(
-    (b) => {
-      const m = b.getAttribute("data-mode");
-      if (m === "how") return;
-      if (m === name || (name === "home" && m === "home")) {
-        b.setAttribute("aria-current", "page");
-      } else {
-        b.removeAttribute("aria-current");
-      }
-    },
-  );
   el("screen-home").hidden = name !== "home";
   el("screen-game").hidden = name === "home";
+  if (name === "home") startTeaser();
+  else stopTeaser();
   renderAll();
 }
 
-function cardInto(
-  rootId: string,
-  c: Company | null,
-  showValue: boolean,
-  asOf: string,
-): void {
-  const root = el(rootId);
-  // clear
+function panelInto(panelId: string, c: Company | null, showValue: boolean, kicker: string): void {
+  const root = el(panelId);
   while (root.firstChild) root.removeChild(root.firstChild);
   if (!c) {
     const p = document.createElement("p");
@@ -183,67 +216,90 @@ function cardInto(
     root.appendChild(p);
     return;
   }
-  const top = document.createElement("div");
-  top.className = "card-top";
-  const tile = document.createElement("div");
-  tile.className = "tile";
-  tile.textContent = monogram(c.name);
-  tile.style.background = tileColor(c.id);
-  tile.setAttribute("aria-hidden", "true");
-  const nameWrap = document.createElement("div");
+  root.style.setProperty("--tint", panelTint(c.id));
+
+  const wm = document.createElement("div");
+  wm.className = "watermark";
+  wm.setAttribute("aria-hidden", "true");
+  wm.textContent = monogram(c.name);
+  root.appendChild(wm);
+
+  const kick = document.createElement("p");
+  kick.className = "company-kicker";
+  kick.textContent = kicker;
+  root.appendChild(kick);
+
   const h = document.createElement("p");
   h.className = "company-name";
   h.textContent = c.name;
-  const meta = document.createElement("div");
-  meta.className = "company-meta";
-  meta.textContent = `${countryToFlag(c.country)} ${countryLabel(c.country)} · ${c.sector}`;
-  nameWrap.appendChild(h);
-  nameWrap.appendChild(meta);
-  top.appendChild(tile);
-  top.appendChild(nameWrap);
+  root.appendChild(h);
+
+  const pills = document.createElement("div");
+  pills.className = "pill-row";
+  const country = document.createElement("span");
+  country.className = "pill";
+  country.textContent = countryLabel(c.country).toUpperCase();
+  const sector = document.createElement("span");
+  sector.className = "pill";
+  sector.textContent = c.sector.toUpperCase();
+  pills.appendChild(country);
+  pills.appendChild(sector);
+  root.appendChild(pills);
 
   const val = document.createElement("div");
   val.className = "company-value" + (showValue ? "" : " mystery");
-  val.id = rootId + "-value";
+  val.id = panelId + "-value";
   val.textContent = showValue ? formatUSD(c.usd) : "?";
+  root.appendChild(val);
+
   const note = document.createElement("div");
   note.className = "value-note";
-  note.textContent = showValue ? `Market cap · as of ${asOf}` : "Market cap · make your guess";
-
-  root.appendChild(top);
-  root.appendChild(val);
+  note.textContent = showValue ? `MARKET CAP · AS OF ${state.asOf}` : "MARKET CAP · GUESS";
   root.appendChild(note);
+
+  if (panelId === "panel-mystery") {
+    const row = document.createElement("div");
+    row.className = "guess-row";
+    const bigger = document.createElement("button");
+    bigger.className = "guess-btn guess-bigger";
+    bigger.id = "btn-bigger";
+    bigger.type = "button";
+    bigger.textContent = "▲ BIGGER";
+    bigger.setAttribute("aria-label", "Bigger: the mystery company is worth more");
+    const smaller = document.createElement("button");
+    smaller.className = "guess-btn guess-smaller";
+    smaller.id = "btn-smaller";
+    smaller.type = "button";
+    smaller.textContent = "▼ SMALLER";
+    smaller.setAttribute("aria-label", "Smaller: the mystery company is worth less");
+    const canGuess = state.phase === "guess";
+    bigger.disabled = !canGuess;
+    smaller.disabled = !canGuess;
+    bigger.addEventListener("click", () => guess("bigger"));
+    smaller.addEventListener("click", () => guess("smaller"));
+    row.appendChild(bigger);
+    row.appendChild(smaller);
+    root.appendChild(row);
+  }
+}
+
+function heatClass(streak: number): string {
+  if (streak >= 20) return "heat-3";
+  if (streak >= 10) return "heat-2";
+  if (streak >= 5) return "heat-1";
+  return "";
 }
 
 function renderAll(): void {
-  // header best
-  const bestLine = el("best-line");
-  while (bestLine.firstChild) bestLine.removeChild(bestLine.firstChild);
-  const s1 = document.createElement("span");
-  s1.textContent = "Best streak: ";
-  const strong = document.createElement("strong");
-  strong.textContent = String(state.best);
-  strong.id = "best-value";
-  bestLine.appendChild(s1);
-  bestLine.appendChild(strong);
+  el("best-value").textContent = String(state.best);
+  el("best-chip-num").textContent = String(state.best);
 
-  // footer stamp
   el("data-stamp").textContent = state.asOf
-    ? `Market data via public sources, refreshed daily · As of ${state.asOf}`
-    : "Market data via public sources, refreshed daily";
+    ? `Data refreshed daily · as of ${state.asOf}`
+    : "Data refreshed daily";
 
-  // daily button state
-  const t = todayISO();
-  const done = loadDaily(t);
-  const dailyBtn = el<HTMLButtonElement>("btn-daily");
-  dailyBtn.disabled = false;
-  if (done) {
-    dailyBtn.textContent = `Daily challenge — Done today ✓ (${done.score}/${done.total})`;
-  } else {
-    dailyBtn.textContent = "Daily challenge — 10 pairs today";
-  }
-
-  document.title = `${APP_NAME} — ${APP_TAGLINE}`;
+  document.title = `${APP_NAME}: ${APP_TAGLINE.toLowerCase()}`;
+  tickClock();
 
   if (state.mode === "home") return;
   renderGame();
@@ -252,45 +308,116 @@ function renderAll(): void {
 function renderGame(): void {
   const isDaily = state.mode === "daily";
   el("mode-label").textContent = isDaily
-    ? `Daily · ${Math.min(state.dailyIndex + 1, DAILY_COUNT)}/${DAILY_COUNT}`
-    : "Endless";
-  el("streak-pill").textContent = isDaily
-    ? `Score ${state.dailyResults.filter(Boolean).length}/${DAILY_COUNT}`
-    : `Streak ${state.streak} · Best ${state.best}`;
-  if (isDaily) {
-    el("daily-progress").textContent = dailyScoreGrid(state.dailyResults);
-    (el("daily-progress") as HTMLElement).hidden = false;
-  } else {
-    (el("daily-progress") as HTMLElement).hidden = true;
+    ? `DAILY ${Math.min(state.dailyIndex + 1, DAILY_COUNT)}/${DAILY_COUNT}`
+    : "ENDLESS";
+
+  const chip = el("streak-pill");
+  chip.classList.remove("heat-1", "heat-2", "heat-3");
+  const n = isDaily ? state.dailyResults.filter(Boolean).length : state.streak;
+  el("streak-num").textContent = String(n);
+  if (!isDaily) {
+    const heat = heatClass(state.streak);
+    if (heat) chip.classList.add(heat);
   }
 
-  cardInto("card-left", state.left, true, state.asOf);
-  cardInto(
-    "card-right",
-    state.right,
-    state.phase === "reveal",
-    state.asOf,
-  );
+  const bar = el("daily-bar");
+  if (isDaily) {
+    bar.hidden = false;
+    while (bar.firstChild) bar.removeChild(bar.firstChild);
+    for (let i = 0; i < DAILY_COUNT; i++) {
+      const seg = document.createElement("i");
+      const r = state.dailyResults[i];
+      if (r === true) seg.className = "hit";
+      else if (r === false) seg.className = "miss";
+      bar.appendChild(seg);
+    }
+  } else {
+    bar.hidden = true;
+  }
 
-  const bigger = el<HTMLButtonElement>("btn-bigger");
-  const smaller = el<HTMLButtonElement>("btn-smaller");
-  const canGuess = state.phase === "guess" && !!state.left && !!state.right;
-  bigger.disabled = !canGuess;
-  smaller.disabled = !canGuess;
+  panelInto("panel-known", state.left, true, "KNOWN");
+  panelInto("panel-mystery", state.right, state.phase === "reveal", "MYSTERY");
 
   const live = el("result-live");
   if (state.phase === "guess") {
-    live.textContent = state.left && state.right
-      ? `${state.left.name} is ${formatUSD(state.left.usd)}. Is ${state.right.name} bigger or smaller?`
-      : "Loading pair.";
+    live.textContent =
+      state.left && state.right
+        ? `${state.left.name} is ${formatUSD(state.left.usd)}. Is ${state.right.name} bigger or smaller?`
+        : "Loading pair.";
+  }
+}
+
+/* ---------- countdown ---------- */
+
+function msToNextDaily(): number {
+  const now = new Date();
+  const next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1));
+  return Math.max(0, next.getTime() - now.getTime());
+}
+
+function fmtCountdown(ms: number): string {
+  const s = Math.floor(ms / 1000);
+  const h = String(Math.floor(s / 3600)).padStart(2, "0");
+  const m = String(Math.floor((s % 3600) / 60)).padStart(2, "0");
+  const sec = String(s % 60).padStart(2, "0");
+  return `${h}:${m}:${sec}`;
+}
+
+function tickClock(): void {
+  const cd = fmtCountdown(msToNextDaily());
+  const t = todayISO();
+  const done = loadDaily(t);
+  const ds = document.getElementById("daily-state");
+  if (ds) {
+    ds.textContent = done ? `DONE ✓ ${done.score}/${done.total}` : `PLAY · NEXT IN ${cd}`;
+  }
+  const dc = document.getElementById("daily-countdown");
+  if (dc) dc.textContent = `Next daily in ${cd}`;
+}
+
+/* ---------- teaser ---------- */
+
+function flipTeaser(): void {
+  if (state.items.length < 2 || state.mode !== "home") return;
+  const a = state.items[Math.floor(Math.random() * state.items.length)];
+  let b = state.items[Math.floor(Math.random() * state.items.length)];
+  if (b.id === a.id) b = state.items[(state.items.indexOf(a) + 7) % state.items.length];
+  el("teaser-a").textContent = a.name;
+  el("teaser-b").textContent = b.name;
+  if (!reducedMotion()) {
+    const tz = el("teaser");
+    tz.classList.remove("swap");
+    void tz.offsetWidth;
+    tz.classList.add("swap");
+  }
+}
+
+function startTeaser(): void {
+  stopTeaser();
+  flipTeaser();
+  if (reducedMotion()) return;
+  teaserTimer = window.setInterval(flipTeaser, 3000);
+}
+
+function stopTeaser(): void {
+  if (teaserTimer) {
+    window.clearInterval(teaserTimer);
+    teaserTimer = 0;
   }
 }
 
 /* ---------- game flow ---------- */
 
+function spinVs(): void {
+  // Full 360° spin every round so the badge always lands upright reading "VS".
+  vsTurns += 1;
+  el("vs-badge").style.transform = `rotate(${vsTurns * 360}deg)`;
+}
+
 function startEndless(): void {
   if (state.items.length === 0) return;
   track("start_endless");
+  buzz();
   state.streak = 0;
   state.recent = [];
   state.phase = "guess";
@@ -303,6 +430,7 @@ function startEndless(): void {
   state.recent = pushRecent(pushRecent(state.recent, r.left.id), r.right.id);
   hideSheet();
   setScreen("endless");
+  spinVs();
   announceCards();
 }
 
@@ -311,15 +439,15 @@ function startDaily(): void {
   const t = todayISO();
   const existing = loadDaily(t);
   if (existing) {
-    // show completed state
     track("daily_view_done");
     state.dailyResults = existing.grid.split("").map((g) => g === "🟩");
     state.dailyDone = true;
-    showDailyDoneSheet(existing.score, existing.total, existing.grid);
     setScreen("daily");
+    showDailyDoneSheet(existing.score, existing.total, existing.grid);
     return;
   }
   track("start_daily");
+  buzz();
   dailyRounds = dailyPairs(state.items, t);
   if (dailyRounds.length === 0) return;
   state.dailyIndex = 0;
@@ -330,6 +458,7 @@ function startDaily(): void {
   state.right = dailyRounds[0].right;
   hideSheet();
   setScreen("daily");
+  spinVs();
   announceCards();
 }
 
@@ -344,6 +473,7 @@ function announceCards(): void {
 
 function guess(g: Guess): void {
   if (state.phase !== "guess" || !state.left || !state.right) return;
+  buzz();
   const left = state.left;
   const right = state.right;
   const correct = isCorrect(left, right, g);
@@ -352,40 +482,51 @@ function guess(g: Guess): void {
   const live = el("result-live");
   live.textContent = `Revealing ${right.name}…`;
 
-  const valNode = document.getElementById("card-right-value");
+  const valNode = document.getElementById("panel-mystery-value");
   const arena = el("arena");
-  arena.classList.remove("pulse-ok", "pulse-bad", "slide-in");
+  const mystery = el("panel-mystery");
+  arena.classList.remove("shake");
+  mystery.classList.remove("flash", "slide-in");
   if (valNode) {
     countUp(valNode, Math.max(1, right.usd / 8), right.usd, () => {
       if (correct) {
-        arena.classList.add("pulse-ok");
+        mystery.classList.add("flash");
+        const chip = el("streak-pill");
+        chip.classList.remove("pop");
+        void chip.offsetWidth;
+        chip.classList.add("pop");
         live.textContent = `Correct! ${right.name} is ${formatUSD(right.usd)}.`;
-        el("result-line").textContent = "";
-        showInlineResult(true, right, left);
-        window.setTimeout(() => advanceAfterCorrect(), prefersReducedMotion() ? 60 : 650);
+        showInlineResult(true, g, right, left);
+        window.setTimeout(() => advanceAfterCorrect(), reducedMotion() ? 60 : 700);
       } else {
-        arena.classList.add("pulse-bad");
+        void arena.offsetWidth;
+        arena.classList.add("shake");
         live.textContent = `Wrong. ${right.name} is ${formatUSD(right.usd)}.`;
-        showInlineResult(false, right, left);
-        window.setTimeout(() => gameOver(left, right), prefersReducedMotion() ? 60 : 900);
+        showInlineResult(false, g, right, left);
+        window.setTimeout(() => gameOver(left, right), reducedMotion() ? 60 : 850);
       }
     });
   }
 }
 
-function showInlineResult(ok: boolean, right: Company, left: Company): void {
+function showInlineResult(ok: boolean, g: Guess, right: Company, left: Company): void {
   const line = el("result-line");
   while (line.firstChild) line.removeChild(line.firstChild);
   line.className = "result-line " + (ok ? "ok" : "bad");
-  const icon = document.createElement("span");
-  icon.setAttribute("aria-hidden", "true");
-  icon.textContent = ok ? "✓" : "✕";
-  const words = document.createElement("span");
-  words.textContent = ok
-    ? `Correct — ${right.name} ${formatUSD(right.usd)}`
-    : `Not quite — ${right.name} ${formatUSD(right.usd)} vs ${left.name} ${formatUSD(left.usd)}`;
-  line.appendChild(icon);
-  line.appendChild(words);
+  const arrow = g === "bigger" ? "▲" : "▼";
+  line.textContent = ok
+    ? `${arrow} Correct — ${right.name} ${formatUSD(right.usd)}`
+    : `${arrow} Wrong — ${right.name} ${formatUSD(right.usd)} vs ${left.name} ${formatUSD(left.usd)}`;
+}
+
+function milestone(n: number): void {
+  if (reducedMotion()) return;
+  const m = el("milestone");
+  el("milestone-text").textContent = `${n} IN A ROW`;
+  m.hidden = false;
+  window.setTimeout(() => {
+    m.hidden = true;
+  }, 900);
 }
 
 function advanceAfterCorrect(): void {
@@ -394,24 +535,28 @@ function advanceAfterCorrect(): void {
     state.dailyResults.push(true);
     const idx = state.dailyIndex;
     if (idx + 1 >= dailyRounds.length || idx + 1 >= DAILY_COUNT) {
-      finishDaily(true);
+      finishDaily();
       return;
     }
     state.dailyIndex = idx + 1;
     state.left = dailyRounds[state.dailyIndex].left;
-    // keep streak continuity visual: slide right to left
     state.right = dailyRounds[state.dailyIndex].right;
     state.phase = "guess";
-    el("arena").classList.add("slide-in");
+    el("panel-mystery").classList.add("slide-in");
     hideInlineResult();
     renderGame();
+    spinVs();
     announceCards();
     return;
   }
   state.streak += 1;
+  const prevBest = state.best;
   state.best = nextBest(state.best, state.streak);
   saveBest(state.best);
-  // right slides left
+  if (state.streak === 10 || state.streak === 25 || state.streak === 50) {
+    milestone(state.streak);
+  }
+  void prevBest;
   const newLeft = state.right;
   const r = nextRound(state.items, newLeft, state.streak, state.recent, Math.random);
   if (!r) {
@@ -422,9 +567,10 @@ function advanceAfterCorrect(): void {
   state.right = r.right;
   state.recent = pushRecent(state.recent, r.right.id);
   state.phase = "guess";
-  el("arena").classList.add("slide-in");
+  el("panel-mystery").classList.add("slide-in");
   hideInlineResult();
   renderGame();
+  spinVs();
   announceCards();
 }
 
@@ -432,7 +578,7 @@ function handleWrongDaily(): void {
   state.dailyResults.push(false);
   const idx = state.dailyIndex;
   if (idx + 1 >= dailyRounds.length || idx + 1 >= DAILY_COUNT) {
-    finishDaily(false);
+    finishDaily();
     return;
   }
   state.dailyIndex = idx + 1;
@@ -441,10 +587,11 @@ function handleWrongDaily(): void {
   state.phase = "guess";
   hideInlineResult();
   renderGame();
+  spinVs();
   announceCards();
 }
 
-function finishDaily(_lastCorrect: boolean): void {
+function finishDaily(): void {
   const t = todayISO();
   const score = state.dailyResults.filter(Boolean).length;
   const grid = dailyScoreGrid(state.dailyResults);
@@ -460,24 +607,49 @@ function hideInlineResult(): void {
   while (line.firstChild) line.removeChild(line.firstChild);
 }
 
+function ratioLine(a: Company, b: Company): string {
+  const big = a.usd >= b.usd ? a : b;
+  const small = a.usd >= b.usd ? b : a;
+  const r = big.usd / small.usd;
+  const shown = r >= 10 ? String(Math.round(r)) : (Math.round(r * 10) / 10).toString();
+  return `${big.name} is ${shown}× bigger than ${small.name}`;
+}
+
 function gameOver(left: Company, right: Company): void {
   if (state.mode === "daily") {
-    // daily never "ends" on a wrong answer — it moves on
     handleWrongDaily();
     return;
   }
   const finalStreak = state.streak;
+  const prevBest = state.best;
   state.best = nextBest(state.best, finalStreak);
   saveBest(state.best);
   renderAll();
-  showEndSheet(finalStreak, state.best, left, right);
+  showEndSheet(finalStreak, state.best, finalStreak > prevBest && finalStreak > 0, left, right);
 }
 
 /* ---------- sheets / modal ---------- */
 
+function confettiInto(box: HTMLElement): void {
+  if (reducedMotion()) return;
+  const wrap = document.createElement("div");
+  wrap.className = "confetti";
+  wrap.setAttribute("aria-hidden", "true");
+  const colors = ["#FACC15", "#22C55E", "#EF4444", "#F2F4F8"];
+  for (let i = 0; i < 40; i++) {
+    const p = document.createElement("i");
+    p.style.setProperty("--x", `${(i * 97) % 100}%`);
+    p.style.setProperty("--c", colors[i % colors.length]);
+    p.style.setProperty("--d", `${1.2 + ((i * 37) % 100) / 100}s`);
+    wrap.appendChild(p);
+  }
+  box.appendChild(wrap);
+}
+
 function showEndSheet(
   score: number,
   best: number,
+  isRecord: boolean,
   left: Company,
   right: Company,
 ): void {
@@ -485,54 +657,61 @@ function showEndSheet(
   bd.hidden = false;
   const box = el("sheet");
   while (box.firstChild) box.removeChild(box.firstChild);
+  if (isRecord) confettiInto(box);
 
   const h = document.createElement("h2");
-  h.textContent = "Run over";
+  h.textContent = "GAME OVER";
   const sc = document.createElement("p");
-  sc.className = "score-big";
+  sc.className = "final-score";
   sc.id = "final-score";
-  sc.textContent = `Score ${score} · Best ${best}`;
-  const pair = document.createElement("p");
-  pair.id = "final-pair";
-  pair.textContent = `${left.name} ${formatUSD(left.usd)} vs ${right.name} ${formatUSD(right.usd)}`;
+  sc.textContent = String(score);
+  const bst = document.createElement("p");
+  bst.className = "final-best";
+  bst.textContent = `BEST ${best}`;
   box.appendChild(h);
   box.appendChild(sc);
-  box.appendChild(pair);
+  box.appendChild(bst);
+  if (isRecord) {
+    const nb = document.createElement("p");
+    nb.className = "final-newbest";
+    nb.textContent = "▲ NEW BEST ▲";
+    box.appendChild(nb);
+  }
 
-  const loser = score === 0 ? right : right;
-  if (loser.fun) {
+  const pair = document.createElement("p");
+  pair.className = "final-pair";
+  pair.id = "final-pair";
+  pair.textContent = `${left.name} ${formatUSD(left.usd)} vs ${right.name} ${formatUSD(right.usd)}`;
+  const ratio = document.createElement("p");
+  ratio.className = "final-ratio";
+  ratio.textContent = ratioLine(left, right);
+  box.appendChild(pair);
+  box.appendChild(ratio);
+
+  if (right.fun) {
     const fun = document.createElement("p");
     fun.className = "fun-fact";
     fun.id = "final-fun";
-    fun.textContent = loser.fun;
+    fun.textContent = right.fun;
     box.appendChild(fun);
   }
 
   const actions = document.createElement("div");
   actions.className = "sheet-actions";
   const share = document.createElement("button");
-  share.className = "btn btn-primary";
+  share.className = "btn-gold";
   share.id = "btn-share";
   share.type = "button";
-  share.textContent = "Share";
+  share.textContent = "SHARE";
   share.addEventListener("click", () => shareScore(score));
   const again = document.createElement("button");
-  again.className = "btn btn-ghost";
+  again.className = "btn-ghost-dark";
   again.id = "btn-again";
   again.type = "button";
-  again.textContent = "Play again";
+  again.textContent = "PLAY AGAIN";
   again.addEventListener("click", () => startEndless());
-  const home = document.createElement("button");
-  home.className = "btn btn-ghost";
-  home.type = "button";
-  home.textContent = "Home";
-  home.addEventListener("click", () => {
-    hideSheet();
-    setScreen("home");
-  });
   actions.appendChild(share);
   actions.appendChild(again);
-  actions.appendChild(home);
   box.appendChild(actions);
   el<HTMLButtonElement>("btn-again").focus();
 }
@@ -543,17 +722,19 @@ function showDailyDoneSheet(score: number, total: number, grid: string): void {
   const box = el("sheet");
   while (box.firstChild) box.removeChild(box.firstChild);
   const h = document.createElement("h2");
-  h.textContent = "Daily complete";
+  h.textContent = "DAILY RESULT";
   const sc = document.createElement("p");
-  sc.className = "score-big";
+  sc.className = "final-score";
   sc.id = "final-score";
-  sc.textContent = `Score ${score}/${total}`;
+  sc.textContent = `${score}/${total}`;
   const gp = document.createElement("p");
-  gp.className = "daily-progress";
+  gp.className = "daily-grid";
   gp.id = "final-grid";
   gp.textContent = grid;
   const note = document.createElement("p");
-  note.textContent = "One attempt per day. Come back tomorrow for new pairs.";
+  note.className = "daily-count";
+  note.id = "daily-countdown";
+  note.textContent = "";
   box.appendChild(h);
   box.appendChild(sc);
   box.appendChild(gp);
@@ -561,19 +742,20 @@ function showDailyDoneSheet(score: number, total: number, grid: string): void {
   const actions = document.createElement("div");
   actions.className = "sheet-actions";
   const share = document.createElement("button");
-  share.className = "btn btn-primary";
+  share.className = "btn-gold";
   share.id = "btn-share-daily";
   share.type = "button";
-  share.textContent = "Share";
+  share.textContent = "SHARE";
   share.addEventListener("click", () => shareDaily(score, total, grid));
   const endless = document.createElement("button");
-  endless.className = "btn btn-ghost";
+  endless.className = "btn-ghost-dark";
   endless.type = "button";
-  endless.textContent = "Play endless";
+  endless.textContent = "PLAY ENDLESS";
   endless.addEventListener("click", () => startEndless());
   actions.appendChild(share);
   actions.appendChild(endless);
   box.appendChild(actions);
+  tickClock();
 }
 
 function hideSheet(): void {
@@ -581,13 +763,11 @@ function hideSheet(): void {
 }
 
 async function shareScore(score: number): Promise<void> {
-  const text = shareText(score, siteUrl());
-  await doShare(text);
+  await doShare(shareText(score, siteUrl()));
 }
 
 async function shareDaily(score: number, total: number, grid: string): Promise<void> {
-  const text = dailyShareText(score, total, todayISO(), grid, siteUrl());
-  await doShare(text);
+  await doShare(dailyShareText(score, total, todayISO(), grid, siteUrl()));
 }
 
 async function doShare(text: string): Promise<void> {
@@ -613,22 +793,45 @@ async function doShare(text: string): Promise<void> {
   window.prompt("Copy your score:", text);
 }
 
+/* ---------- settings ---------- */
+
+function syncSwitches(): void {
+  const s = loadSettings();
+  el("toggle-crypto").setAttribute("aria-checked", String(s.crypto));
+  const reduce = reducedMotion();
+  el("toggle-motion").setAttribute("aria-checked", String(reduce));
+  document.body.classList.toggle("reduce-motion", reduce);
+}
+
+function flipSwitch(id: "toggle-crypto" | "toggle-motion"): void {
+  const s = loadSettings();
+  if (id === "toggle-crypto") {
+    s.crypto = !s.crypto;
+    saveSettings(s);
+    void loadValues();
+  } else {
+    s.reducedMotion = !reducedMotion();
+    saveSettings(s);
+    stopTeaser();
+    if (state.mode === "home") startTeaser();
+  }
+  syncSwitches();
+}
+
 /* ---------- wiring ---------- */
 
 function wire(): void {
   el<HTMLButtonElement>("btn-play").addEventListener("click", startEndless);
   el<HTMLButtonElement>("btn-daily").addEventListener("click", startDaily);
-  el<HTMLButtonElement>("btn-bigger").addEventListener("click", () => guess("bigger"));
-  el<HTMLButtonElement>("btn-smaller").addEventListener("click", () => guess("smaller"));
-  el<HTMLButtonElement>("nav-endless").addEventListener("click", () => {
-    hideSheet();
-    if (state.items.length > 0 && state.mode !== "endless") startEndless();
-    else setScreen("endless");
-  });
-  el<HTMLButtonElement>("nav-daily").addEventListener("click", () => {
+  el<HTMLButtonElement>("teaser").addEventListener("click", startEndless);
+  el<HTMLButtonElement>("btn-home").addEventListener("click", () => {
     hideSheet();
     setScreen("home");
-    startDaily();
+  });
+  el("wordmark").addEventListener("click", (e) => {
+    e.preventDefault();
+    hideSheet();
+    setScreen("home");
   });
   el<HTMLButtonElement>("nav-how").addEventListener("click", () => {
     el("how-backdrop").hidden = false;
@@ -639,13 +842,34 @@ function wire(): void {
   el("how-backdrop").addEventListener("click", (e) => {
     if (e.target === el("how-backdrop")) el("how-backdrop").hidden = true;
   });
+  el<HTMLButtonElement>("nav-settings").addEventListener("click", () => {
+    syncSwitches();
+    el("settings-backdrop").hidden = false;
+  });
+  el<HTMLButtonElement>("settings-close").addEventListener("click", () => {
+    el("settings-backdrop").hidden = true;
+  });
+  el("settings-backdrop").addEventListener("click", (e) => {
+    if (e.target === el("settings-backdrop")) el("settings-backdrop").hidden = true;
+  });
+  el<HTMLButtonElement>("toggle-crypto").addEventListener("click", () => flipSwitch("toggle-crypto"));
+  el<HTMLButtonElement>("toggle-motion").addEventListener("click", () => flipSwitch("toggle-motion"));
   el("sheet-backdrop").addEventListener("click", (e) => {
     if (e.target === el("sheet-backdrop")) hideSheet();
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       el("how-backdrop").hidden = true;
+      el("settings-backdrop").hidden = true;
       return;
+    }
+    if (e.key === "Enter" && !el("sheet-backdrop").hidden) {
+      const again = document.getElementById("btn-again") as HTMLButtonElement | null;
+      if (again && document.activeElement !== again) {
+        e.preventDefault();
+        again.click();
+        return;
+      }
     }
     if (state.mode === "home") return;
     if ((e.target as HTMLElement).tagName === "BUTTON" && e.key === "Enter") return;
@@ -658,35 +882,9 @@ function wire(): void {
     }
   });
 
-  const crypto = el<HTMLInputElement>("opt-crypto");
-  crypto.checked = loadSettings().crypto;
-  crypto.addEventListener("change", () => {
-    const s = loadSettings();
-    s.crypto = crypto.checked;
-    saveSettings(s);
-    void loadValues();
-  });
-  const motion = el<HTMLInputElement>("opt-motion");
-  try {
-    motion.checked =
-      loadSettings().reducedMotion ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  } catch {
-    motion.checked = false;
-  }
-  motion.addEventListener("change", () => {
-    const s = loadSettings();
-    s.reducedMotion = motion.checked;
-    saveSettings(s);
-  });
-
-  el("wordmark").textContent = "";
-  const mark = document.createElement("span");
-  mark.className = "wordmark-mark";
-  mark.textContent = "O";
-  mark.setAttribute("aria-hidden", "true");
-  el("wordmark").appendChild(mark);
-  el("wordmark").appendChild(document.createTextNode(APP_NAME));
+  clockTimer = window.setInterval(tickClock, 1000);
+  void clockTimer;
+  syncSwitches();
 }
 
 wire();

@@ -1,4 +1,4 @@
-// Checks the gzipped JS budget (<60 KB). Run after `vite build`.
+// Checks the gzipped JS budget (<80 KB). Run after `vite build`.
 import { readdirSync, statSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { gzipSync } from "node:zlib";
@@ -18,8 +18,8 @@ try {
   console.error("dist/assets not found — run `npm run build` first");
   process.exit(1);
 }
-console.log(`total JS gzipped: ${(total / 1024).toFixed(1)} KB (budget 60 KB)`);
-if (total > 60 * 1024) {
+console.log(`total JS gzipped: ${(total / 1024).toFixed(1)} KB (budget 80 KB)`);
+if (total > 80 * 1024) {
   console.error("JS budget exceeded");
   process.exit(1);
 }

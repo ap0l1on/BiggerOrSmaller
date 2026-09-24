@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Outweigh is a static game site. The latest `main` branch is the supported
+Bigger or Smaller is a static game site. The latest `main` branch is the supported
 version; older deploys receive no updates.
 
 ## Reporting a vulnerability

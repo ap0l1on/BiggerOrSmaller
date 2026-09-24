@@ -3,37 +3,59 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Outweigh — Which company is worth more?</title>
+    <title>Bigger or Smaller: which company is worth more?</title>
     <meta
       name="description"
-      content="Outweigh: an endless higher-or-lower game about company size. Guess which company is worth more."
+      content="Bigger or Smaller: a higher-or-lower showdown about company size. Guess bigger or smaller, build your streak, try the daily 10."
     />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
     />
-    <meta property="og:title" content="Outweigh — Which company is worth more?" />
+    <meta property="og:title" content="Bigger or Smaller: which company is worth more?" />
     <meta
       property="og:description"
-      content="Guess which company is worth more. Streak as far as you can, try the daily challenge."
+      content="Guess which company is worth more. Build your streak, beat the daily 10."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./og.svg" />
+    <meta property="og:url" content="https://ap0l1on.github.io/BiggerOrSmaller/" />
+    <meta property="og:image" content="https://ap0l1on.github.io/BiggerOrSmaller/og.svg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link
+      rel="preload"
+      href="./fonts/anton-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/inter-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to game</a>
+    <div class="tape" id="tape" aria-hidden="true"><div class="tape-track" id="tape-track"></div></div>
+
     <header class="site-header">
-      <div class="wrap">
-        <a class="wordmark" id="wordmark" href="./">Outweigh</a>
-        <nav class="nav" aria-label="Game modes">
-          <button class="nav-btn" id="nav-daily" data-mode="daily" type="button">Daily</button>
-          <button class="nav-btn" id="nav-endless" data-mode="endless" type="button">Endless</button>
-          <button class="nav-btn" id="nav-how" data-mode="how" type="button">How to play</button>
-        </nav>
+      <div class="wrap header-row">
+        <a class="wordmark" id="wordmark" href="./" aria-label="Bigger or Smaller — home">
+          <span class="wm wm-bigger"><span aria-hidden="true">▲</span> BIGGER</span>
+          <span class="wm wm-or">or</span>
+          <span class="wm wm-smaller"><span aria-hidden="true">▼</span> SMALLER</span>
+        </a>
+        <div class="header-actions">
+          <button class="icon-btn" id="nav-how" type="button" aria-label="How to play">?</button>
+          <button class="icon-btn" id="nav-settings" type="button" aria-label="Settings">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -43,43 +65,57 @@
 
         <section id="screen-home" aria-labelledby="home-title">
           <div class="hero">
-            <h1 id="home-title">Which company is worth more?</h1>
-            <p class="sub">Pick bigger or smaller. Streak as far as you can.</p>
+            <p class="hero-kicker">The company-size showdown</p>
+            <h1 id="home-title" class="mega-wordmark" aria-label="Bigger or Smaller">
+              <span class="mega mega-bigger"><span aria-hidden="true">▲</span> BIGGER</span>
+              <span class="mega mega-or">or</span>
+              <span class="mega mega-smaller"><span aria-hidden="true">▼</span> SMALLER</span>
+            </h1>
+            <p class="tagline">Which company is worth more?</p>
           </div>
-          <div class="cta-row">
-            <button class="btn btn-primary" id="btn-play" type="button">Play endless</button>
-            <button class="btn btn-secondary" id="btn-daily" type="button">
-              Daily challenge — 10 pairs today
+
+          <div class="mode-tiles">
+            <button class="mode-tile mode-endless" id="btn-play" type="button">
+              <span class="mode-name">ENDLESS</span>
+              <span class="mode-desc">How far can you go?</span>
+              <span class="mode-best">BEST <strong id="best-value">0</strong></span>
+            </button>
+            <button class="mode-tile mode-daily" id="btn-daily" type="button">
+              <span class="mode-name">DAILY</span>
+              <span class="mode-desc">10 pairs. Same for everyone.</span>
+              <span class="mode-best" id="daily-state">PLAY</span>
             </button>
           </div>
-          <p class="best-line" id="best-line">Best streak: <strong id="best-value">0</strong></p>
-          <p class="best-line">
-            <label><input type="checkbox" id="opt-crypto" /> Include Big 5 crypto</label>
-            &nbsp;·&nbsp;
-            <label><input type="checkbox" id="opt-motion" /> Reduce motion</label>
-          </p>
+
+          <button class="teaser" id="teaser" type="button" aria-label="Try an example pair">
+            <span class="teaser-label">TONIGHT'S UNDER CARD</span>
+            <span class="teaser-pair">
+              <strong id="teaser-a">—</strong>
+              <span class="teaser-vs">VS</span>
+              <strong id="teaser-b">—</strong>
+            </span>
+            <span class="teaser-cta">Tap to settle it</span>
+          </button>
         </section>
 
         <section id="screen-game" aria-labelledby="mode-label" hidden>
-          <div class="streak-bar">
-            <span class="mode-label" id="mode-label">Endless</span>
-            <span class="streak-pill" id="streak-pill">Streak 0 · Best 0</span>
+          <div class="game-topbar">
+            <span class="streak-chip" id="streak-pill">
+              <svg class="flame" id="flame" width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path d="M9 0c.8 4.2-4.5 6.6-4.5 11.4 0 1.5.5 2.9 1.4 4C3.9 14.6 2.5 12.4 2.5 10 1 11.6 0 13.9 0 16.2 0 19.4 4 22 9 22s9-2.6 9-5.8c0-5.3-4.6-6.6-5.4-11.4-.2 1.6-1.4 3-3.6 3.4.6-1.6.7-2.9 0-4.2z" fill="currentColor"/></svg>
+              <span id="streak-num">0</span>
+            </span>
+            <span class="mode-label" id="mode-label">ENDLESS</span>
+            <span class="best-chip">BEST <strong id="best-chip-num">0</strong></span>
+            <button class="icon-btn" id="btn-home" type="button" aria-label="Quit to home">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="5" height="5" fill="currentColor"/><rect x="10" y="1" width="5" height="5" fill="currentColor"/><rect x="1" y="10" width="5" height="5" fill="currentColor"/><rect x="10" y="10" width="5" height="5" fill="currentColor"/></svg>
+            </button>
           </div>
-          <p class="daily-progress" id="daily-progress" hidden></p>
+          <div class="daily-bar" id="daily-bar" hidden aria-hidden="true"></div>
 
           <div class="arena" id="arena">
-            <article class="card" id="card-left" aria-label="Known company"></article>
-            <div class="vs-badge" aria-hidden="true">VS</div>
-            <article class="card" id="card-right" aria-label="Mystery company"></article>
-          </div>
-
-          <div class="guess-row">
-            <button class="btn guess-btn guess-bigger" id="btn-bigger" type="button">
-              Bigger ↑
-            </button>
-            <button class="btn guess-btn guess-smaller" id="btn-smaller" type="button">
-              Smaller ↓
-            </button>
+            <article class="panel panel-known" id="panel-known" aria-label="Known company"></article>
+            <div class="vs-badge" id="vs-badge" aria-hidden="true">VS</div>
+            <article class="panel panel-mystery" id="panel-mystery" aria-label="Mystery company"></article>
           </div>
 
           <p class="sr-only" id="result-live" aria-live="polite"></p>
@@ -88,6 +124,8 @@
       </div>
     </main>
 
+    <div class="milestone" id="milestone" hidden aria-hidden="true"><span id="milestone-text"></span></div>
+
     <div class="sheet-backdrop" id="sheet-backdrop" hidden>
       <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="final-score"></div>
     </div>
@@ -95,22 +133,45 @@
     <div class="sheet-backdrop" id="how-backdrop" hidden>
       <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="how-title">
         <h2 id="how-title">How to play</h2>
-        <ol>
-          <li>The left company shows its market value. The right one is a mystery.</li>
-          <li>Guess whether the right company is <strong>Bigger</strong> or <strong>Smaller</strong>.</li>
-          <li>Right answers build your streak. Pairs get closer the further you go.</li>
+        <ol class="how-steps">
+          <li><strong>1 · See a company.</strong> The known side shows its market cap. The other side is a mystery.</li>
+          <li><strong>2 · Guess bigger or smaller.</strong> Hit <strong>▲ BIGGER</strong> or <strong>▼ SMALLER</strong>. Keys ↑ / ↓ work too.</li>
+          <li><strong>3 · Keep the streak alive.</strong> Right answers roll on. One wrong guess ends the run — pairs get tighter the further you go.</li>
         </ol>
         <div class="sheet-actions">
-          <button class="btn btn-primary" id="how-close" type="button">Got it</button>
+          <button class="btn-gold" id="how-close" type="button">GOT IT</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sheet-backdrop" id="settings-backdrop" hidden>
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+        <h2 id="settings-title">Settings</h2>
+        <div class="setting-row">
+          <div>
+            <p class="setting-name">Include crypto</p>
+            <p class="setting-desc">Add the Big 5 coins to the mix. Off by default.</p>
+          </div>
+          <button class="switch" id="toggle-crypto" type="button" role="switch" aria-checked="false" aria-label="Include crypto"></button>
+        </div>
+        <div class="setting-row">
+          <div>
+            <p class="setting-name">Reduce motion</p>
+            <p class="setting-desc">No ticker, shake or confetti. Values appear instantly.</p>
+          </div>
+          <button class="switch" id="toggle-motion" type="button" role="switch" aria-checked="false" aria-label="Reduce motion"></button>
+        </div>
+        <div class="sheet-actions">
+          <button class="btn-ghost-dark" id="settings-close" type="button">DONE</button>
         </div>
       </div>
     </div>
 
     <footer class="site-footer">
-      <div class="wrap">
+      <div class="wrap footer-row">
         <span>A game about company size. Values are approximate and delayed. Not investment advice.</span>
-        <span id="data-stamp">Market data via public sources, refreshed daily</span>
-        <span><a href="https://github.com/ap0l1on/BiggerOrSmaller">GitHub</a> · MIT</span>
+        <span id="data-stamp">Data refreshed daily</span>
+        <span><a href="https://github.com/ap0l1on/BiggerOrSmaller">GitHub</a></span>
       </div>
     </footer>
 

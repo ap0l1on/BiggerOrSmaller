@@ -26,20 +26,27 @@ describe("store", () => {
     expect(loadBest()).toBe(0);
     saveBest(17);
     expect(loadBest()).toBe(17);
+    expect((localStorage as Storage).getItem("bos:best")).toBe("17");
+  });
+
+  it("carries best scores over the rename", () => {
+    (localStorage as Storage).setItem("outweigh:best", JSON.stringify(21));
+    expect(loadBest()).toBe(21);
+    expect((localStorage as Storage).getItem("bos:best")).toBe("21");
   });
 
   it("resets hostile best values cleanly", () => {
-    (localStorage as Storage).setItem("outweigh:best", "not-json{{{");
+    (localStorage as Storage).setItem("bos:best", "not-json{{{");
     expect(loadBest()).toBe(0);
-    (localStorage as Storage).setItem("outweigh:best", JSON.stringify(-5));
+    (localStorage as Storage).setItem("bos:best", JSON.stringify(-5));
     expect(loadBest()).toBe(0);
-    (localStorage as Storage).setItem("outweigh:best", JSON.stringify(1e12));
+    (localStorage as Storage).setItem("bos:best", JSON.stringify(1e12));
     expect(loadBest()).toBe(0);
   });
 
   it("schema-checks settings and daily", () => {
     expect(loadSettings()).toEqual({ reducedMotion: false, crypto: false });
-    (localStorage as Storage).setItem("outweigh:settings", "{bad");
+    (localStorage as Storage).setItem("bos:settings", "{bad");
     expect(loadSettings()).toEqual({ reducedMotion: false, crypto: false });
     expect(loadDaily("2026-10-20")).toBeNull();
   });
