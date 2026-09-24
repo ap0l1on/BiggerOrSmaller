@@ -1,0 +1,29 @@
+{
+  "name": "outweigh",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Outweigh — an endless higher-or-lower game about company size.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "build:values": "tsx scripts/build-values.ts",
+    "check:contrast": "node scripts/check-contrast.mjs",
+    "check:size": "node scripts/check-size.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.4",
+    "typescript": "^5.6.2",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.3",
+    "tsx": "^4.19.1",
+    "yahoo-finance2": "^2.12.0"
+  }
+}
