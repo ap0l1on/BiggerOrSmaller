@@ -1,0 +1,34 @@
+name: Report wrong data
+description: A company value looks wrong in the game
+title: "[data] "
+labels: ["data"]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: Which company?
+      description: Name and ticker, e.g. "Turkish Airlines (THYAO.IS)"
+      placeholder: "Turkish Airlines (THYAO.IS)"
+    validations:
+      required: true
+  - type: input
+    id: asof
+    attributes:
+      label: "As of" date shown in the game
+      description: The date under the value, e.g. 2026-10-20
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What looks wrong?
+      description: What the game shows vs what you expected, with a source link if you have one
+    validations:
+      required: true
+  - type: checkboxes
+    id: advice
+    attributes:
+      label: Reminder
+      options:
+        - label: I understand this is a game about company size, not investment advice
+          required: true

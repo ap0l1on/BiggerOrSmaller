@@ -44,6 +44,15 @@ export function convertToUSD(
   fx: Record<string, number>,
 ): number | null {
   if (!Number.isFinite(marketCap) || marketCap <= 0) return null;
+  // Yahoo reports London prices in pence ("GBp"): 100 pence = 1 pound.
+  if (currency === "GBp") {
+    const pounds = marketCap / 100;
+    const d = fx["GBPUSD"];
+    if (Number.isFinite(d) && (d as number) > 0) return pounds * (d as number);
+    const ind = fx["USDGBP"];
+    if (Number.isFinite(ind) && (ind as number) > 0) return pounds / (ind as number);
+    return null;
+  }
   const cur = (currency || "USD").toUpperCase();
   if (cur === "USD" || cur === "USUSD" || cur === "USDT") return marketCap;
   // fx maps e.g. { EURUSD: 1.08, USDTRY: 34.1, ... } — value of 1 unit of
@@ -62,20 +71,11 @@ export function convertToUSD(
   }
   // Some Yahoo currency codes need mapping.
   const aliases: Record<string, string> = {
-    GBp: "GBP", // pence -> pounds handled below
     ILA: "ILS",
     ZAc: "ZAR",
   };
   const mapped = aliases[cur];
   if (mapped) {
-    if (cur === "GBp") {
-      const gbp = marketCap / 100;
-      const d = fx["GBPUSD"];
-      if (Number.isFinite(d) && (d as number) > 0) return gbp * (d as number);
-      const ind = fx["USDGBP"];
-      if (Number.isFinite(ind) && (ind as number) > 0) return gbp / (ind as number);
-      return null;
-    }
     return convertToUSD(marketCap, mapped, fx);
   }
   return null;

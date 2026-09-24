@@ -1,0 +1,1971 @@
+[
+  {
+    "country": "US",
+    "fun": "Makes the iPhone, which outsells most companies' entire output.",
+    "name": "Apple",
+    "sector": "Technology",
+    "ticker": "AAPL"
+  },
+  {
+    "country": "US",
+    "fun": "Windows and Azure power a huge share of office computers.",
+    "name": "Microsoft",
+    "sector": "Technology",
+    "ticker": "MSFT"
+  },
+  {
+    "country": "US",
+    "fun": "Its chips power the AI boom.",
+    "name": "NVIDIA",
+    "sector": "Technology",
+    "ticker": "NVDA"
+  },
+  {
+    "country": "US",
+    "fun": "Started as an online bookstore in 1994.",
+    "name": "Amazon",
+    "sector": "Retail",
+    "ticker": "AMZN"
+  },
+  {
+    "country": "US",
+    "fun": "Google's parent makes almost all its money from ads.",
+    "name": "Alphabet",
+    "sector": "Technology",
+    "ticker": "GOOGL"
+  },
+  {
+    "country": "US",
+    "fun": "Facebook, Instagram and WhatsApp under one roof.",
+    "name": "Meta",
+    "sector": "Technology",
+    "ticker": "META"
+  },
+  {
+    "country": "US",
+    "name": "Broadcom",
+    "sector": "Technology",
+    "ticker": "AVGO"
+  },
+  {
+    "country": "US",
+    "fun": "Worth more than most carmakers combined at its peak.",
+    "name": "Tesla",
+    "sector": "Automotive",
+    "ticker": "TSLA"
+  },
+  {
+    "country": "US",
+    "fun": "Warren Buffett's holding company; owns Dairy Queen and Geico.",
+    "name": "Berkshire Hathaway",
+    "sector": "Finance",
+    "ticker": "BRK-B"
+  },
+  {
+    "country": "TW",
+    "fun": "Makes chips for Apple, NVIDIA and AMD.",
+    "name": "TSMC",
+    "sector": "Technology",
+    "ticker": "TSM"
+  },
+  {
+    "country": "US",
+    "name": "Eli Lilly",
+    "sector": "Healthcare",
+    "ticker": "LLY"
+  },
+  {
+    "country": "US",
+    "name": "Visa",
+    "sector": "Finance",
+    "ticker": "V"
+  },
+  {
+    "country": "US",
+    "name": "JPMorgan Chase",
+    "sector": "Finance",
+    "ticker": "JPM"
+  },
+  {
+    "country": "US",
+    "name": "Exxon Mobil",
+    "sector": "Energy",
+    "ticker": "XOM"
+  },
+  {
+    "country": "US",
+    "name": "Mastercard",
+    "sector": "Finance",
+    "ticker": "MA"
+  },
+  {
+    "country": "US",
+    "name": "Oracle",
+    "sector": "Technology",
+    "ticker": "ORCL"
+  },
+  {
+    "country": "US",
+    "fun": "Sells $5 rotisserie chickens famous on TikTok.",
+    "name": "Costco",
+    "sector": "Retail",
+    "ticker": "COST"
+  },
+  {
+    "country": "US",
+    "fun": "Once mailed DVDs in red envelopes.",
+    "name": "Netflix",
+    "sector": "Media",
+    "ticker": "NFLX"
+  },
+  {
+    "country": "US",
+    "name": "Procter & Gamble",
+    "sector": "Consumer",
+    "ticker": "PG"
+  },
+  {
+    "country": "US",
+    "name": "Home Depot",
+    "sector": "Retail",
+    "ticker": "HD"
+  },
+  {
+    "country": "US",
+    "fun": "The world's largest private employer.",
+    "name": "Walmart",
+    "sector": "Retail",
+    "ticker": "WMT"
+  },
+  {
+    "country": "US",
+    "name": "Johnson & Johnson",
+    "sector": "Healthcare",
+    "ticker": "JNJ"
+  },
+  {
+    "country": "US",
+    "name": "Bank of America",
+    "sector": "Finance",
+    "ticker": "BAC"
+  },
+  {
+    "country": "US",
+    "name": "Salesforce",
+    "sector": "Technology",
+    "ticker": "CRM"
+  },
+  {
+    "country": "US",
+    "name": "AbbVie",
+    "sector": "Healthcare",
+    "ticker": "ABBV"
+  },
+  {
+    "country": "US",
+    "fun": "Its secret recipe sits in a vault in Atlanta.",
+    "name": "Coca-Cola",
+    "sector": "Consumer",
+    "ticker": "KO"
+  },
+  {
+    "country": "US",
+    "name": "AMD",
+    "sector": "Technology",
+    "ticker": "AMD"
+  },
+  {
+    "country": "US",
+    "fun": "Mickey Mouse is nearly 100 years old.",
+    "name": "Disney",
+    "sector": "Media",
+    "ticker": "DIS"
+  },
+  {
+    "country": "GB",
+    "name": "Linde",
+    "sector": "Industrials",
+    "ticker": "LIN"
+  },
+  {
+    "country": "US",
+    "name": "Merck",
+    "sector": "Healthcare",
+    "ticker": "MRK"
+  },
+  {
+    "country": "US",
+    "name": "PepsiCo",
+    "sector": "Consumer",
+    "ticker": "PEP"
+  },
+  {
+    "country": "US",
+    "name": "Thermo Fisher",
+    "sector": "Healthcare",
+    "ticker": "TMO"
+  },
+  {
+    "country": "US",
+    "name": "Cisco",
+    "sector": "Technology",
+    "ticker": "CSCO"
+  },
+  {
+    "country": "IE",
+    "name": "Accenture",
+    "sector": "Technology",
+    "ticker": "ACN"
+  },
+  {
+    "country": "US",
+    "name": "Adobe",
+    "sector": "Technology",
+    "ticker": "ADBE"
+  },
+  {
+    "country": "US",
+    "name": "Danaher",
+    "sector": "Healthcare",
+    "ticker": "DHR"
+  },
+  {
+    "country": "US",
+    "name": "Abbott",
+    "sector": "Healthcare",
+    "ticker": "ABT"
+  },
+  {
+    "country": "US",
+    "name": "Wells Fargo",
+    "sector": "Finance",
+    "ticker": "WFC"
+  },
+  {
+    "country": "US",
+    "fun": "Serves 69 million customers a day.",
+    "name": "McDonald's",
+    "sector": "Consumer",
+    "ticker": "MCD"
+  },
+  {
+    "country": "US",
+    "name": "General Electric",
+    "sector": "Industrials",
+    "ticker": "GE"
+  },
+  {
+    "country": "US",
+    "name": "Chevron",
+    "sector": "Energy",
+    "ticker": "CVX"
+  },
+  {
+    "country": "US",
+    "name": "Amgen",
+    "sector": "Healthcare",
+    "ticker": "AMGN"
+  },
+  {
+    "country": "US",
+    "name": "IBM",
+    "sector": "Technology",
+    "ticker": "IBM"
+  },
+  {
+    "country": "US",
+    "name": "Goldman Sachs",
+    "sector": "Finance",
+    "ticker": "GS"
+  },
+  {
+    "country": "US",
+    "name": "Morgan Stanley",
+    "sector": "Finance",
+    "ticker": "MS"
+  },
+  {
+    "country": "US",
+    "name": "American Express",
+    "sector": "Finance",
+    "ticker": "AXP"
+  },
+  {
+    "country": "US",
+    "name": "Caterpillar",
+    "sector": "Industrials",
+    "ticker": "CAT"
+  },
+  {
+    "country": "US",
+    "name": "Honeywell",
+    "sector": "Industrials",
+    "ticker": "HON"
+  },
+  {
+    "country": "US",
+    "name": "Nike",
+    "sector": "Consumer",
+    "ticker": "NKE"
+  },
+  {
+    "country": "US",
+    "fun": "Its coffee cups carry first names, often misspelled.",
+    "name": "Starbucks",
+    "sector": "Consumer",
+    "ticker": "SBUX"
+  },
+  {
+    "country": "US",
+    "name": "Intel",
+    "sector": "Technology",
+    "ticker": "INTC"
+  },
+  {
+    "country": "US",
+    "name": "Pfizer",
+    "sector": "Healthcare",
+    "ticker": "PFE"
+  },
+  {
+    "country": "US",
+    "name": "Verizon",
+    "sector": "Telecom",
+    "ticker": "VZ"
+  },
+  {
+    "country": "US",
+    "name": "AT&T",
+    "sector": "Telecom",
+    "ticker": "T"
+  },
+  {
+    "country": "US",
+    "name": "Comcast",
+    "sector": "Media",
+    "ticker": "CMCSA"
+  },
+  {
+    "country": "US",
+    "name": "Philip Morris",
+    "sector": "Consumer",
+    "ticker": "PM"
+  },
+  {
+    "country": "US",
+    "name": "Union Pacific",
+    "sector": "Industrials",
+    "ticker": "UNP"
+  },
+  {
+    "country": "US",
+    "name": "UnitedHealth",
+    "sector": "Healthcare",
+    "ticker": "UNH"
+  },
+  {
+    "country": "US",
+    "name": "Prologis",
+    "sector": "Real Estate",
+    "ticker": "PLD"
+  },
+  {
+    "country": "US",
+    "name": "BlackRock",
+    "sector": "Finance",
+    "ticker": "BLK"
+  },
+  {
+    "country": "US",
+    "name": "Texas Instruments",
+    "sector": "Technology",
+    "ticker": "TXN"
+  },
+  {
+    "country": "US",
+    "name": "Qualcomm",
+    "sector": "Technology",
+    "ticker": "QCOM"
+  },
+  {
+    "country": "US",
+    "name": "Applied Materials",
+    "sector": "Technology",
+    "ticker": "AMAT"
+  },
+  {
+    "country": "US",
+    "name": "Micron",
+    "sector": "Technology",
+    "ticker": "MU"
+  },
+  {
+    "country": "US",
+    "name": "Lam Research",
+    "sector": "Technology",
+    "ticker": "LRCX"
+  },
+  {
+    "country": "US",
+    "name": "Analog Devices",
+    "sector": "Technology",
+    "ticker": "ADI"
+  },
+  {
+    "country": "US",
+    "fun": "Lets anyone rent out their spare room.",
+    "name": "Airbnb",
+    "sector": "Consumer",
+    "ticker": "ABNB"
+  },
+  {
+    "country": "US",
+    "fun": "Matches riders and drivers in minutes.",
+    "name": "Uber",
+    "sector": "Technology",
+    "ticker": "UBER"
+  },
+  {
+    "country": "US",
+    "name": "Booking Holdings",
+    "sector": "Consumer",
+    "ticker": "BKNG"
+  },
+  {
+    "country": "US",
+    "name": "Shopify",
+    "sector": "Technology",
+    "ticker": "SHOP"
+  },
+  {
+    "ticker": "SHOP.TO",
+    "name": "Shopify (Toronto)",
+    "country": "CA",
+    "sector": "Technology",
+    "fun": "Ottawa-born shop software used by millions of stores."
+  },
+  {
+    "country": "US",
+    "fun": "Players build whole worlds block by block.",
+    "name": "Roblox",
+    "sector": "Media",
+    "ticker": "RBLX"
+  },
+  {
+    "country": "US",
+    "fun": "Music streaming with Wrapped every December.",
+    "name": "Spotify",
+    "sector": "Media",
+    "ticker": "SPOT"
+  },
+  {
+    "country": "US",
+    "name": "PayPal",
+    "sector": "Finance",
+    "ticker": "PYPL"
+  },
+  {
+    "country": "US",
+    "name": "Block",
+    "sector": "Finance",
+    "ticker": "SQ"
+  },
+  {
+    "country": "US",
+    "name": "Coinbase",
+    "sector": "Finance",
+    "ticker": "COIN"
+  },
+  {
+    "country": "US",
+    "name": "Palantir",
+    "sector": "Technology",
+    "ticker": "PLTR"
+  },
+  {
+    "country": "US",
+    "name": "CrowdStrike",
+    "sector": "Technology",
+    "ticker": "CRWD"
+  },
+  {
+    "country": "US",
+    "name": "Snowflake",
+    "sector": "Technology",
+    "ticker": "SNOW"
+  },
+  {
+    "country": "US",
+    "name": "Datadog",
+    "sector": "Technology",
+    "ticker": "DDOG"
+  },
+  {
+    "country": "US",
+    "name": "Workday",
+    "sector": "Technology",
+    "ticker": "WDAY"
+  },
+  {
+    "country": "US",
+    "name": "Intuit",
+    "sector": "Technology",
+    "ticker": "INTU"
+  },
+  {
+    "country": "US",
+    "name": "ServiceNow",
+    "sector": "Technology",
+    "ticker": "NOW"
+  },
+  {
+    "country": "US",
+    "name": "Palo Alto Networks",
+    "sector": "Technology",
+    "ticker": "PANW"
+  },
+  {
+    "country": "US",
+    "name": "Mondelez",
+    "sector": "Consumer",
+    "ticker": "MDLZ"
+  },
+  {
+    "country": "US",
+    "name": "Colgate-Palmolive",
+    "sector": "Consumer",
+    "ticker": "CL"
+  },
+  {
+    "country": "US",
+    "name": "General Mills",
+    "sector": "Consumer",
+    "ticker": "GIS"
+  },
+  {
+    "country": "US",
+    "name": "Kraft Heinz",
+    "sector": "Consumer",
+    "ticker": "KHC"
+  },
+  {
+    "country": "US",
+    "name": "Ford",
+    "sector": "Automotive",
+    "ticker": "F"
+  },
+  {
+    "ticker": "STLA",
+    "name": "Stellantis",
+    "country": "IT",
+    "sector": "Automotive",
+    "fun": "Owns Jeep, Peugeot and Fiat under one roof."
+  },
+  {
+    "country": "US",
+    "name": "General Motors",
+    "sector": "Automotive",
+    "ticker": "GM"
+  },
+  {
+    "country": "IT",
+    "fun": "Makes about 14,000 cars a year — on purpose.",
+    "name": "Ferrari",
+    "sector": "Automotive",
+    "ticker": "RACE"
+  },
+  {
+    "country": "DE",
+    "name": "Volkswagen",
+    "sector": "Automotive",
+    "ticker": "VOW.DE"
+  },
+  {
+    "country": "DE",
+    "name": "Mercedes-Benz",
+    "sector": "Automotive",
+    "ticker": "MBG.DE"
+  },
+  {
+    "country": "DE",
+    "name": "BMW",
+    "sector": "Automotive",
+    "ticker": "BMW.DE"
+  },
+  {
+    "country": "DE",
+    "name": "Porsche",
+    "sector": "Automotive",
+    "ticker": "P911.DE"
+  },
+  {
+    "country": "JP",
+    "fun": "Sells more cars than any other company most years.",
+    "name": "Toyota",
+    "sector": "Automotive",
+    "ticker": "7203.T"
+  },
+  {
+    "country": "JP",
+    "name": "Honda",
+    "sector": "Automotive",
+    "ticker": "7267.T"
+  },
+  {
+    "country": "KR",
+    "name": "Hyundai Motor",
+    "sector": "Automotive",
+    "ticker": "005380.KS"
+  },
+  {
+    "country": "KR",
+    "name": "Kia",
+    "sector": "Automotive",
+    "ticker": "000270.KS"
+  },
+  {
+    "country": "CN",
+    "name": "Tencent",
+    "sector": "Technology",
+    "ticker": "0700.HK"
+  },
+  {
+    "country": "CN",
+    "name": "Alibaba",
+    "sector": "Technology",
+    "ticker": "BABA"
+  },
+  {
+    "country": "CN",
+    "name": "PDD Holdings",
+    "sector": "Retail",
+    "ticker": "PDD"
+  },
+  {
+    "country": "CN",
+    "name": "JD.com",
+    "sector": "Retail",
+    "ticker": "JD"
+  },
+  {
+    "country": "CN",
+    "name": "Baidu",
+    "sector": "Technology",
+    "ticker": "BIDU"
+  },
+  {
+    "country": "CN",
+    "name": "Xiaomi",
+    "sector": "Technology",
+    "ticker": "1810.HK"
+  },
+  {
+    "country": "CN",
+    "name": "BYD",
+    "sector": "Automotive",
+    "ticker": "1211.HK"
+  },
+  {
+    "country": "CN",
+    "name": "NIO",
+    "sector": "Automotive",
+    "ticker": "NIO"
+  },
+  {
+    "country": "CN",
+    "name": "ICBC",
+    "sector": "Finance",
+    "ticker": "1398.HK"
+  },
+  {
+    "country": "CN",
+    "name": "China Construction Bank",
+    "sector": "Finance",
+    "ticker": "0939.HK"
+  },
+  {
+    "country": "CN",
+    "name": "Bank of China",
+    "sector": "Finance",
+    "ticker": "3988.HK"
+  },
+  {
+    "country": "CN",
+    "name": "Ping An Insurance",
+    "sector": "Finance",
+    "ticker": "2318.HK"
+  },
+  {
+    "country": "CN",
+    "fun": "Makes the fiery liquor drunk at every Chinese banquet.",
+    "name": "Kweichow Moutai",
+    "sector": "Consumer",
+    "ticker": "600519.SS"
+  },
+  {
+    "country": "CN",
+    "name": "CATL",
+    "sector": "Industrials",
+    "ticker": "300750.SZ"
+  },
+  {
+    "country": "CN",
+    "name": "PetroChina",
+    "sector": "Energy",
+    "ticker": "0857.HK"
+  },
+  {
+    "country": "CN",
+    "name": "China Mobile",
+    "sector": "Telecom",
+    "ticker": "0941.HK"
+  },
+  {
+    "country": "CN",
+    "name": "Meituan",
+    "sector": "Technology",
+    "ticker": "3690.HK"
+  },
+  {
+    "country": "NL",
+    "fun": "The only company that makes the machines for cutting-edge chips.",
+    "name": "ASML",
+    "sector": "Technology",
+    "ticker": "ASML"
+  },
+  {
+    "country": "FR",
+    "fun": "Owns Louis Vuitton, Dior and Sephora.",
+    "name": "LVMH",
+    "sector": "Consumer",
+    "ticker": "MC.PA"
+  },
+  {
+    "country": "FR",
+    "fun": "A single Birkin bag can cost more than a car.",
+    "name": "Hermès",
+    "sector": "Consumer",
+    "ticker": "RMS.PA"
+  },
+  {
+    "country": "FR",
+    "name": "L'Oréal",
+    "sector": "Consumer",
+    "ticker": "OR.PA"
+  },
+  {
+    "country": "FR",
+    "name": "TotalEnergies",
+    "sector": "Energy",
+    "ticker": "TTE.PA"
+  },
+  {
+    "country": "FR",
+    "name": "Airbus",
+    "sector": "Industrials",
+    "ticker": "AIR.PA"
+  },
+  {
+    "country": "FR",
+    "name": "Sanofi",
+    "sector": "Healthcare",
+    "ticker": "SAN.PA"
+  },
+  {
+    "country": "FR",
+    "name": "BNP Paribas",
+    "sector": "Finance",
+    "ticker": "BNP.PA"
+  },
+  {
+    "country": "CH",
+    "name": "Nestlé",
+    "sector": "Consumer",
+    "ticker": "NESN.SW"
+  },
+  {
+    "country": "CH",
+    "name": "Roche",
+    "sector": "Healthcare",
+    "ticker": "ROG.SW"
+  },
+  {
+    "country": "CH",
+    "name": "Novartis",
+    "sector": "Healthcare",
+    "ticker": "NOVN.SW"
+  },
+  {
+    "country": "DE",
+    "name": "SAP",
+    "sector": "Technology",
+    "ticker": "SAP.DE"
+  },
+  {
+    "country": "DE",
+    "name": "Siemens",
+    "sector": "Industrials",
+    "ticker": "SIE.DE"
+  },
+  {
+    "country": "DE",
+    "name": "Allianz",
+    "sector": "Finance",
+    "ticker": "ALV.DE"
+  },
+  {
+    "country": "DE",
+    "fun": "Three stripes, one giant sportswear rivalry with Nike.",
+    "name": "Adidas",
+    "sector": "Consumer",
+    "ticker": "ADS.DE"
+  },
+  {
+    "country": "GB",
+    "name": "AstraZeneca",
+    "sector": "Healthcare",
+    "ticker": "AZN"
+  },
+  {
+    "country": "GB",
+    "name": "Shell",
+    "sector": "Energy",
+    "ticker": "SHEL"
+  },
+  {
+    "country": "GB",
+    "name": "HSBC",
+    "sector": "Finance",
+    "ticker": "HSBA.L"
+  },
+  {
+    "country": "GB",
+    "name": "Unilever",
+    "sector": "Consumer",
+    "ticker": "ULVR.L"
+  },
+  {
+    "country": "GB",
+    "name": "BP",
+    "sector": "Energy",
+    "ticker": "BP.L"
+  },
+  {
+    "country": "GB",
+    "name": "Diageo",
+    "sector": "Consumer",
+    "ticker": "DGE.L"
+  },
+  {
+    "country": "GB",
+    "name": "Barclays",
+    "sector": "Finance",
+    "ticker": "BARC.L"
+  },
+  {
+    "country": "DK",
+    "name": "Novo Nordisk",
+    "sector": "Healthcare",
+    "ticker": "NOVO-B.CO"
+  },
+  {
+    "country": "SE",
+    "name": "Atlas Copco",
+    "sector": "Industrials",
+    "ticker": "ATCO-A.ST"
+  },
+  {
+    "country": "SE",
+    "fun": "Flat-pack furniture in 100+ countries.",
+    "name": "Investor AB",
+    "sector": "Finance",
+    "ticker": "INVE-B.ST"
+  },
+  {
+    "country": "NL",
+    "name": "Prosus",
+    "sector": "Technology",
+    "ticker": "PRX.AS"
+  },
+  {
+    "country": "ES",
+    "fun": "Zara's parent refreshes store stock twice a week.",
+    "name": "Inditex",
+    "sector": "Consumer",
+    "ticker": "ITX.MC"
+  },
+  {
+    "country": "ES",
+    "name": "Iberdrola",
+    "sector": "Energy",
+    "ticker": "IBE.MC"
+  },
+  {
+    "country": "IT",
+    "name": "Enel",
+    "sector": "Energy",
+    "ticker": "ENEL.MI"
+  },
+  {
+    "country": "IT",
+    "name": "UniCredit",
+    "sector": "Finance",
+    "ticker": "UCG.MI"
+  },
+  {
+    "country": "JP",
+    "fun": "Mario's home: in business for 135+ years.",
+    "name": "Nintendo",
+    "sector": "Media",
+    "ticker": "7974.T"
+  },
+  {
+    "country": "JP",
+    "fun": "From Walkman to PlayStation and Spider-Man movies.",
+    "name": "Sony",
+    "sector": "Technology",
+    "ticker": "6758.T"
+  },
+  {
+    "country": "JP",
+    "name": "SoftBank",
+    "sector": "Finance",
+    "ticker": "9984.T"
+  },
+  {
+    "country": "JP",
+    "name": "Mitsubishi UFJ",
+    "sector": "Finance",
+    "ticker": "8306.T"
+  },
+  {
+    "country": "JP",
+    "name": "Keyence",
+    "sector": "Industrials",
+    "ticker": "6861.T"
+  },
+  {
+    "country": "JP",
+    "name": "Hitachi",
+    "sector": "Industrials",
+    "ticker": "6501.T"
+  },
+  {
+    "country": "JP",
+    "name": "Mitsubishi Corp",
+    "sector": "Industrials",
+    "ticker": "8058.T"
+  },
+  {
+    "country": "JP",
+    "name": "Fast Retailing",
+    "sector": "Consumer",
+    "ticker": "9983.T"
+  },
+  {
+    "country": "JP",
+    "name": "NTT",
+    "sector": "Telecom",
+    "ticker": "9432.T"
+  },
+  {
+    "country": "JP",
+    "name": "Tokyo Electron",
+    "sector": "Technology",
+    "ticker": "8035.T"
+  },
+  {
+    "country": "JP",
+    "name": "Daikin",
+    "sector": "Industrials",
+    "ticker": "6367.T"
+  },
+  {
+    "country": "JP",
+    "name": "Nintendo",
+    "sector": "Media",
+    "ticker": "NTDOY"
+  },
+  {
+    "country": "KR",
+    "fun": "Makes the phone in your pocket and the chip inside it.",
+    "name": "Samsung Electronics",
+    "sector": "Technology",
+    "ticker": "005930.KS"
+  },
+  {
+    "country": "KR",
+    "name": "SK Hynix",
+    "sector": "Technology",
+    "ticker": "000660.KS"
+  },
+  {
+    "country": "KR",
+    "name": "LG Energy Solution",
+    "sector": "Industrials",
+    "ticker": "373220.KS"
+  },
+  {
+    "country": "KR",
+    "name": "Samsung Biologics",
+    "sector": "Healthcare",
+    "ticker": "207940.KS"
+  },
+  {
+    "country": "KR",
+    "name": "Naver",
+    "sector": "Technology",
+    "ticker": "035420.KS"
+  },
+  {
+    "country": "TW",
+    "name": "MediaTek",
+    "sector": "Technology",
+    "ticker": "2454.TW"
+  },
+  {
+    "country": "TW",
+    "name": "Foxconn",
+    "sector": "Technology",
+    "ticker": "2317.TW"
+  },
+  {
+    "country": "TW",
+    "name": "Delta Electronics",
+    "sector": "Industrials",
+    "ticker": "2308.TW"
+  },
+  {
+    "country": "IN",
+    "fun": "From oil refineries to India's biggest mobile network.",
+    "name": "Reliance Industries",
+    "sector": "Energy",
+    "ticker": "RELIANCE.NS"
+  },
+  {
+    "country": "IN",
+    "name": "TCS",
+    "sector": "Technology",
+    "ticker": "TCS.NS"
+  },
+  {
+    "country": "IN",
+    "name": "HDFC Bank",
+    "sector": "Finance",
+    "ticker": "HDFCBANK.NS"
+  },
+  {
+    "country": "IN",
+    "name": "Infosys",
+    "sector": "Technology",
+    "ticker": "INFY.NS"
+  },
+  {
+    "country": "IN",
+    "name": "ICICI Bank",
+    "sector": "Finance",
+    "ticker": "ICICIBANK.NS"
+  },
+  {
+    "country": "IN",
+    "name": "Bharti Airtel",
+    "sector": "Telecom",
+    "ticker": "BHARTIARTL.NS"
+  },
+  {
+    "country": "IN",
+    "name": "Larsen & Toubro",
+    "sector": "Industrials",
+    "ticker": "LT.NS"
+  },
+  {
+    "country": "IN",
+    "name": "Tata Motors",
+    "sector": "Automotive",
+    "ticker": "TATAMOTORS.NS"
+  },
+  {
+    "country": "SA",
+    "fun": "The world's most profitable oil company.",
+    "name": "Saudi Aramco",
+    "sector": "Energy",
+    "ticker": "2222.SR"
+  },
+  {
+    "country": "SA",
+    "name": "Al Rajhi Bank",
+    "sector": "Finance",
+    "ticker": "1120.SR"
+  },
+  {
+    "country": "SA",
+    "name": "Saudi National Bank",
+    "sector": "Finance",
+    "ticker": "1180.SR"
+  },
+  {
+    "country": "SA",
+    "name": "ACWA Power",
+    "sector": "Energy",
+    "ticker": "2082.SR"
+  },
+  {
+    "country": "AE",
+    "name": "Emirates NBD",
+    "sector": "Finance",
+    "ticker": "EMIRATESNBD.DU"
+  },
+  {
+    "country": "AE",
+    "name": "Emaar Properties",
+    "sector": "Real Estate",
+    "ticker": "EMAAR.DU"
+  },
+  {
+    "country": "SG",
+    "name": "DBS Group",
+    "sector": "Finance",
+    "ticker": "D05.SI"
+  },
+  {
+    "country": "AU",
+    "name": "BHP",
+    "sector": "Materials",
+    "ticker": "BHP.AX"
+  },
+  {
+    "country": "AU",
+    "name": "Commonwealth Bank",
+    "sector": "Finance",
+    "ticker": "CBA.AX"
+  },
+  {
+    "country": "BR",
+    "name": "Petrobras",
+    "sector": "Energy",
+    "ticker": "PBR"
+  },
+  {
+    "country": "BR",
+    "name": "Vale",
+    "sector": "Materials",
+    "ticker": "VALE"
+  },
+  {
+    "country": "CA",
+    "name": "Royal Bank of Canada",
+    "sector": "Finance",
+    "ticker": "RY.TO"
+  },
+  {
+    "ticker": "TD.TO",
+    "name": "TD Bank",
+    "country": "CA",
+    "sector": "Finance"
+  },
+  {
+    "country": "US",
+    "name": "Snap",
+    "sector": "Technology",
+    "ticker": "SNAP"
+  },
+  {
+    "country": "US",
+    "name": "Pinterest",
+    "sector": "Technology",
+    "ticker": "PINS"
+  },
+  {
+    "country": "US",
+    "name": "Zoom",
+    "sector": "Technology",
+    "ticker": "ZM"
+  },
+  {
+    "country": "US",
+    "name": "DocuSign",
+    "sector": "Technology",
+    "ticker": "DOCU"
+  },
+  {
+    "country": "US",
+    "name": "Etsy",
+    "sector": "Retail",
+    "ticker": "ETSY"
+  },
+  {
+    "country": "US",
+    "name": "eBay",
+    "sector": "Retail",
+    "ticker": "EBAY"
+  },
+  {
+    "country": "US",
+    "name": "Warner Bros Discovery",
+    "sector": "Media",
+    "ticker": "WBD"
+  },
+  {
+    "country": "US",
+    "name": "Paramount",
+    "sector": "Media",
+    "ticker": "PARA"
+  },
+  {
+    "country": "US",
+    "name": "Warner Music",
+    "sector": "Media",
+    "ticker": "WMG"
+  },
+  {
+    "country": "US",
+    "name": "Live Nation",
+    "sector": "Media",
+    "ticker": "LYV"
+  },
+  {
+    "country": "US",
+    "name": "DraftKings",
+    "sector": "Consumer",
+    "ticker": "DKNG"
+  },
+  {
+    "country": "US",
+    "name": "Robinhood",
+    "sector": "Finance",
+    "ticker": "HOOD"
+  },
+  {
+    "country": "US",
+    "name": "DoorDash",
+    "sector": "Technology",
+    "ticker": "DASH"
+  },
+  {
+    "country": "US",
+    "name": "Lyft",
+    "sector": "Technology",
+    "ticker": "LYFT"
+  },
+  {
+    "country": "US",
+    "name": "Duolingo",
+    "sector": "Technology",
+    "ticker": "DUOL"
+  },
+  {
+    "country": "US",
+    "name": "Reddit",
+    "sector": "Technology",
+    "ticker": "RDDT"
+  },
+  {
+    "country": "US",
+    "name": "Dell",
+    "sector": "Technology",
+    "ticker": "DELL"
+  },
+  {
+    "country": "US",
+    "name": "HP",
+    "sector": "Technology",
+    "ticker": "HPQ"
+  },
+  {
+    "country": "US",
+    "name": "Best Buy",
+    "sector": "Retail",
+    "ticker": "BBY"
+  },
+  {
+    "country": "US",
+    "name": "Target",
+    "sector": "Retail",
+    "ticker": "TGT"
+  },
+  {
+    "country": "US",
+    "name": "Dollar General",
+    "sector": "Retail",
+    "ticker": "DG"
+  },
+  {
+    "country": "US",
+    "name": "Chipotle",
+    "sector": "Consumer",
+    "ticker": "CMG"
+  },
+  {
+    "country": "US",
+    "name": "Yum! Brands",
+    "sector": "Consumer",
+    "ticker": "YUM"
+  },
+  {
+    "country": "US",
+    "name": "Marriott",
+    "sector": "Consumer",
+    "ticker": "MAR"
+  },
+  {
+    "country": "US",
+    "name": "Hilton",
+    "sector": "Consumer",
+    "ticker": "HLT"
+  },
+  {
+    "country": "US",
+    "name": "Delta Air Lines",
+    "sector": "Industrials",
+    "ticker": "DAL"
+  },
+  {
+    "country": "US",
+    "name": "United Airlines",
+    "sector": "Industrials",
+    "ticker": "UAL"
+  },
+  {
+    "country": "US",
+    "name": "American Airlines",
+    "sector": "Industrials",
+    "ticker": "AAL"
+  },
+  {
+    "country": "US",
+    "name": "Southwest Airlines",
+    "sector": "Industrials",
+    "ticker": "LUV"
+  },
+  {
+    "country": "IE",
+    "fun": "Europe's biggest budget airline by passengers.",
+    "name": "Ryanair",
+    "sector": "Industrials",
+    "ticker": "RYAAY"
+  },
+  {
+    "country": "DE",
+    "name": "Lufthansa",
+    "sector": "Industrials",
+    "ticker": "LHA.DE"
+  },
+  {
+    "country": "GB",
+    "name": "easyJet",
+    "sector": "Industrials",
+    "ticker": "EZJ.L"
+  },
+  {
+    "country": "FR",
+    "name": "Air France-KLM",
+    "sector": "Industrials",
+    "ticker": "AF.PA"
+  },
+  {
+    "country": "US",
+    "name": "Hasbro",
+    "sector": "Consumer",
+    "ticker": "HAS"
+  },
+  {
+    "country": "US",
+    "name": "Mattel",
+    "sector": "Consumer",
+    "ticker": "MAT"
+  },
+  {
+    "country": "US",
+    "name": "Electronic Arts",
+    "sector": "Media",
+    "ticker": "EA"
+  },
+  {
+    "country": "US",
+    "name": "Take-Two",
+    "sector": "Media",
+    "ticker": "TTWO"
+  },
+  {
+    "ticker": "3659.T",
+    "name": "Nexon",
+    "country": "JP",
+    "sector": "Media",
+    "fun": "Makes MapleStory and Dungeon&Fighter."
+  },
+  {
+    "country": "JP",
+    "name": "Capcom",
+    "sector": "Media",
+    "ticker": "9697.T"
+  },
+  {
+    "country": "FR",
+    "name": "Ubisoft",
+    "sector": "Media",
+    "ticker": "UBI.PA"
+  },
+  {
+    "ticker": "TME",
+    "name": "Tencent Music",
+    "country": "CN",
+    "sector": "Media"
+  },
+  {
+    "country": "NL",
+    "name": "Universal Music",
+    "sector": "Media",
+    "ticker": "UMG.AS"
+  },
+  {
+    "country": "US",
+    "name": "Levi Strauss",
+    "sector": "Consumer",
+    "ticker": "LEVI"
+  },
+  {
+    "country": "US",
+    "name": "Ralph Lauren",
+    "sector": "Consumer",
+    "ticker": "RL"
+  },
+  {
+    "country": "US",
+    "name": "Tapestry",
+    "sector": "Consumer",
+    "ticker": "TPR"
+  },
+  {
+    "country": "US",
+    "name": "Under Armour",
+    "sector": "Consumer",
+    "ticker": "UAA"
+  },
+  {
+    "country": "DE",
+    "name": "Puma",
+    "sector": "Consumer",
+    "ticker": "PUM.DE"
+  },
+  {
+    "country": "CH",
+    "name": "Richemont",
+    "sector": "Consumer",
+    "ticker": "CFR.SW"
+  },
+  {
+    "country": "FR",
+    "name": "Kering",
+    "sector": "Consumer",
+    "ticker": "KER.PA"
+  },
+  {
+    "country": "GB",
+    "name": "Burberry",
+    "sector": "Consumer",
+    "ticker": "BRBY.L"
+  },
+  {
+    "country": "US",
+    "name": "GoPro",
+    "sector": "Technology",
+    "ticker": "GPRO"
+  },
+  {
+    "country": "US",
+    "name": "Peloton",
+    "sector": "Consumer",
+    "ticker": "PTON"
+  },
+  {
+    "country": "US",
+    "name": "Beyond Meat",
+    "sector": "Consumer",
+    "ticker": "BYND"
+  },
+  {
+    "country": "US",
+    "name": "Celsius",
+    "sector": "Consumer",
+    "ticker": "CELH"
+  },
+  {
+    "country": "US",
+    "name": "Monster Beverage",
+    "sector": "Consumer",
+    "ticker": "MNST"
+  },
+  {
+    "country": "US",
+    "name": "Keurig Dr Pepper",
+    "sector": "Consumer",
+    "ticker": "KDP"
+  },
+  {
+    "country": "US",
+    "name": "Hershey",
+    "sector": "Consumer",
+    "ticker": "HSY"
+  },
+  {
+    "country": "US",
+    "name": "Kellogg",
+    "sector": "Consumer",
+    "ticker": "K"
+  },
+  {
+    "country": "TR",
+    "fun": "Flies to more countries than any other airline.",
+    "name": "Turkish Airlines",
+    "sector": "Industrials",
+    "ticker": "THYAO.IS"
+  },
+  {
+    "country": "TR",
+    "fun": "Türkiye's biggest defence electronics maker.",
+    "name": "Aselsan",
+    "sector": "Industrials",
+    "ticker": "ASELS.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Koç Holding",
+    "sector": "Finance",
+    "ticker": "KCHOL.IS"
+  },
+  {
+    "country": "TR",
+    "fun": "Türkiye's largest discount grocer.",
+    "name": "BİM",
+    "sector": "Retail",
+    "ticker": "BIMAS.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Garanti BBVA",
+    "sector": "Finance",
+    "ticker": "GARAN.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Turkcell",
+    "sector": "Telecom",
+    "ticker": "TCELL.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Ford Otosan",
+    "sector": "Automotive",
+    "ticker": "FROTO.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Tüpraş",
+    "sector": "Energy",
+    "ticker": "TUPRS.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Ereğli Demir Çelik",
+    "sector": "Materials",
+    "ticker": "EREGL.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Şişecam",
+    "sector": "Materials",
+    "ticker": "SISE.IS"
+  },
+  {
+    "country": "TR",
+    "fun": "Low-cost rival flying from Istanbul's Sabiha airport.",
+    "name": "Pegasus",
+    "sector": "Industrials",
+    "ticker": "PGSUS.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Akbank",
+    "sector": "Finance",
+    "ticker": "AKBNK.IS"
+  },
+  {
+    "country": "TR",
+    "name": "İş Bankası",
+    "sector": "Finance",
+    "ticker": "ISCTR.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Yapı Kredi",
+    "sector": "Finance",
+    "ticker": "YKBNK.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Sabancı Holding",
+    "sector": "Finance",
+    "ticker": "SAHOL.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Emlak Konut",
+    "sector": "Real Estate",
+    "ticker": "EKGYO.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Sasa Polyester",
+    "sector": "Materials",
+    "ticker": "SASA.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Petkim",
+    "sector": "Materials",
+    "ticker": "PETKM.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Tofaş",
+    "sector": "Automotive",
+    "ticker": "TOASO.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Otokar",
+    "sector": "Automotive",
+    "ticker": "OTKAR.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Türk Telekom",
+    "sector": "Telecom",
+    "ticker": "TTKOM.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Migros",
+    "sector": "Retail",
+    "ticker": "MGROS.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Ülker",
+    "sector": "Consumer",
+    "ticker": "ULKER.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Enka İnşaat",
+    "sector": "Industrials",
+    "ticker": "ENKAI.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Koza Altın",
+    "sector": "Materials",
+    "ticker": "KOZAL.IS"
+  },
+  {
+    "ticker": "TAVHL.IS",
+    "name": "TAV Airports",
+    "country": "TR",
+    "sector": "Industrials"
+  },
+  {
+    "country": "TR",
+    "name": "Arçelik",
+    "sector": "Consumer",
+    "ticker": "ARCLK.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Vestel",
+    "sector": "Technology",
+    "ticker": "VESTL.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Şok Marketler",
+    "sector": "Retail",
+    "ticker": "SOKM.IS"
+  },
+  {
+    "country": "TR",
+    "name": "Halkbank",
+    "sector": "Finance",
+    "ticker": "HALKB.IS"
+  },
+  {
+    "country": "TR",
+    "name": "VakıfBank",
+    "sector": "Finance",
+    "ticker": "VAKBN.IS"
+  },
+  {
+    "ticker": "KRDMD.IS",
+    "name": "Kardemir",
+    "country": "TR",
+    "sector": "Materials"
+  },
+  {
+    "country": "CRYPTO",
+    "fun": "The first cryptocurrency, capped at 21 million coins.",
+    "kind": "crypto",
+    "name": "Bitcoin",
+    "sector": "Crypto",
+    "ticker": "BTC-USD"
+  },
+  {
+    "country": "CRYPTO",
+    "fun": "Powers most stablecoins and DeFi apps.",
+    "kind": "crypto",
+    "name": "Ethereum",
+    "sector": "Crypto",
+    "ticker": "ETH-USD"
+  },
+  {
+    "country": "CRYPTO",
+    "kind": "crypto",
+    "name": "Solana",
+    "sector": "Crypto",
+    "ticker": "SOL-USD"
+  },
+  {
+    "country": "CRYPTO",
+    "kind": "crypto",
+    "name": "BNB",
+    "sector": "Crypto",
+    "ticker": "BNB-USD"
+  },
+  {
+    "country": "CRYPTO",
+    "kind": "crypto",
+    "name": "XRP",
+    "sector": "Crypto",
+    "ticker": "XRP-USD"
+  },
+  {
+    "country": "US",
+    "name": "Johnson Controls",
+    "sector": "Industrials",
+    "ticker": "JCI"
+  },
+  {
+    "country": "US",
+    "name": "Eaton",
+    "sector": "Industrials",
+    "ticker": "ETN"
+  },
+  {
+    "country": "US",
+    "name": "Illinois Tool Works",
+    "sector": "Industrials",
+    "ticker": "ITW"
+  },
+  {
+    "country": "US",
+    "name": "3M",
+    "sector": "Industrials",
+    "ticker": "MMM"
+  },
+  {
+    "country": "US",
+    "name": "Deere",
+    "sector": "Industrials",
+    "ticker": "DE"
+  },
+  {
+    "country": "US",
+    "name": "FedEx",
+    "sector": "Industrials",
+    "ticker": "FDX"
+  },
+  {
+    "country": "US",
+    "name": "UPS",
+    "sector": "Industrials",
+    "ticker": "UPS"
+  },
+  {
+    "country": "US",
+    "name": "Cintas",
+    "sector": "Industrials",
+    "ticker": "CTAS"
+  },
+  {
+    "country": "US",
+    "name": "Waste Management",
+    "sector": "Industrials",
+    "ticker": "WM"
+  },
+  {
+    "country": "US",
+    "name": "Sherwin-Williams",
+    "sector": "Materials",
+    "ticker": "SHW"
+  },
+  {
+    "country": "US",
+    "name": "Ecolab",
+    "sector": "Materials",
+    "ticker": "ECL"
+  },
+  {
+    "country": "US",
+    "name": "Newmont",
+    "sector": "Materials",
+    "ticker": "NEM"
+  },
+  {
+    "country": "US",
+    "name": "Duke Energy",
+    "sector": "Energy",
+    "ticker": "DUK"
+  },
+  {
+    "country": "US",
+    "name": "NextEra Energy",
+    "sector": "Energy",
+    "ticker": "NEE"
+  },
+  {
+    "country": "US",
+    "name": "ConocoPhillips",
+    "sector": "Energy",
+    "ticker": "COP"
+  },
+  {
+    "country": "US",
+    "name": "Schlumberger",
+    "sector": "Energy",
+    "ticker": "SLB"
+  },
+  {
+    "country": "US",
+    "name": "EOG Resources",
+    "sector": "Energy",
+    "ticker": "EOG"
+  },
+  {
+    "country": "US",
+    "name": "Marsh McLennan",
+    "sector": "Finance",
+    "ticker": "MMC"
+  },
+  {
+    "country": "US",
+    "name": "Aon",
+    "sector": "Finance",
+    "ticker": "AON"
+  },
+  {
+    "country": "US",
+    "name": "Chubb",
+    "sector": "Finance",
+    "ticker": "CB"
+  },
+  {
+    "country": "US",
+    "name": "CME Group",
+    "sector": "Finance",
+    "ticker": "CME"
+  },
+  {
+    "country": "US",
+    "name": "Intercontinental Exchange",
+    "sector": "Finance",
+    "ticker": "ICE"
+  },
+  {
+    "country": "US",
+    "name": "Fiserv",
+    "sector": "Finance",
+    "ticker": "FI"
+  },
+  {
+    "country": "US",
+    "name": "Automatic Data Processing",
+    "sector": "Technology",
+    "ticker": "ADP"
+  },
+  {
+    "country": "US",
+    "name": "Cognizant",
+    "sector": "Technology",
+    "ticker": "CTSH"
+  },
+  {
+    "country": "US",
+    "name": "Gartner",
+    "sector": "Technology",
+    "ticker": "IT"
+  },
+  {
+    "country": "US",
+    "name": "CDW",
+    "sector": "Technology",
+    "ticker": "CDW"
+  },
+  {
+    "country": "US",
+    "name": "Bristol Myers",
+    "sector": "Healthcare",
+    "ticker": "BMY"
+  },
+  {
+    "country": "US",
+    "name": "Gilead",
+    "sector": "Healthcare",
+    "ticker": "GILD"
+  },
+  {
+    "country": "US",
+    "name": "Regeneron",
+    "sector": "Healthcare",
+    "ticker": "REGN"
+  },
+  {
+    "country": "US",
+    "name": "Vertex",
+    "sector": "Healthcare",
+    "ticker": "VRTX"
+  },
+  {
+    "country": "US",
+    "name": "Moderna",
+    "sector": "Healthcare",
+    "ticker": "MRNA"
+  },
+  {
+    "country": "US",
+    "name": "Elevance Health",
+    "sector": "Healthcare",
+    "ticker": "ELV"
+  },
+  {
+    "country": "US",
+    "name": "HCA Healthcare",
+    "sector": "Healthcare",
+    "ticker": "HCA"
+  },
+  {
+    "country": "US",
+    "name": "Boston Scientific",
+    "sector": "Healthcare",
+    "ticker": "BSX"
+  },
+  {
+    "country": "US",
+    "name": "Stryker",
+    "sector": "Healthcare",
+    "ticker": "SYK"
+  },
+  {
+    "country": "US",
+    "name": "Medtronic",
+    "sector": "Healthcare",
+    "ticker": "MDT"
+  }
+]

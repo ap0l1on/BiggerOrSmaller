@@ -10,13 +10,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "types": ["vite/client", "vitest/globals", "node"]
   },
-  "include": ["src", "scripts", "tests/unit"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "scripts", "tests/unit", "vite.config.ts", "playwright.config.ts", "vitest.config.ts"]
 }

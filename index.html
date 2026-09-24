@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Outweigh — Which company is worth more?</title>
+    <meta
+      name="description"
+      content="Outweigh: an endless higher-or-lower game about company size. Guess which company is worth more."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <meta property="og:title" content="Outweigh — Which company is worth more?" />
+    <meta
+      property="og:description"
+      content="Guess which company is worth more. Streak as far as you can, try the daily challenge."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to game</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="wordmark" id="wordmark" href="./">Outweigh</a>
+        <nav class="nav" aria-label="Game modes">
+          <button class="nav-btn" id="nav-daily" data-mode="daily" type="button">Daily</button>
+          <button class="nav-btn" id="nav-endless" data-mode="endless" type="button">Endless</button>
+          <button class="nav-btn" id="nav-how" data-mode="how" type="button">How to play</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <p id="load-status" role="status"></p>
+
+        <section id="screen-home" aria-labelledby="home-title">
+          <div class="hero">
+            <h1 id="home-title">Which company is worth more?</h1>
+            <p class="sub">Pick bigger or smaller. Streak as far as you can.</p>
+          </div>
+          <div class="cta-row">
+            <button class="btn btn-primary" id="btn-play" type="button">Play endless</button>
+            <button class="btn btn-secondary" id="btn-daily" type="button">
+              Daily challenge — 10 pairs today
+            </button>
+          </div>
+          <p class="best-line" id="best-line">Best streak: <strong id="best-value">0</strong></p>
+          <p class="best-line">
+            <label><input type="checkbox" id="opt-crypto" /> Include Big 5 crypto</label>
+            &nbsp;·&nbsp;
+            <label><input type="checkbox" id="opt-motion" /> Reduce motion</label>
+          </p>
+        </section>
+
+        <section id="screen-game" aria-labelledby="mode-label" hidden>
+          <div class="streak-bar">
+            <span class="mode-label" id="mode-label">Endless</span>
+            <span class="streak-pill" id="streak-pill">Streak 0 · Best 0</span>
+          </div>
+          <p class="daily-progress" id="daily-progress" hidden></p>
+
+          <div class="arena" id="arena">
+            <article class="card" id="card-left" aria-label="Known company"></article>
+            <div class="vs-badge" aria-hidden="true">VS</div>
+            <article class="card" id="card-right" aria-label="Mystery company"></article>
+          </div>
+
+          <div class="guess-row">
+            <button class="btn guess-btn guess-bigger" id="btn-bigger" type="button">
+              Bigger ↑
+            </button>
+            <button class="btn guess-btn guess-smaller" id="btn-smaller" type="button">
+              Smaller ↓
+            </button>
+          </div>
+
+          <p class="sr-only" id="result-live" aria-live="polite"></p>
+          <div class="result-line" id="result-line" aria-hidden="true"></div>
+        </section>
+      </div>
+    </main>
+
+    <div class="sheet-backdrop" id="sheet-backdrop" hidden>
+      <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="final-score"></div>
+    </div>
+
+    <div class="sheet-backdrop" id="how-backdrop" hidden>
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="how-title">
+        <h2 id="how-title">How to play</h2>
+        <ol>
+          <li>The left company shows its market value. The right one is a mystery.</li>
+          <li>Guess whether the right company is <strong>Bigger</strong> or <strong>Smaller</strong>.</li>
+          <li>Right answers build your streak. Pairs get closer the further you go.</li>
+        </ol>
+        <div class="sheet-actions">
+          <button class="btn btn-primary" id="how-close" type="button">Got it</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>A game about company size. Values are approximate and delayed. Not investment advice.</span>
+        <span id="data-stamp">Market data via public sources, refreshed daily</span>
+        <span><a href="https://github.com/ap0l1on/BiggerOrSmaller">GitHub</a> · MIT</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "519b97ca534c48e6aff6d6298a48187f"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

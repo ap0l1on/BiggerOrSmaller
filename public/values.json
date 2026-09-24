@@ -1,0 +1,2294 @@
+{
+  "asOf": "2026-09-24",
+  "items": [
+    {
+      "id": "ASELS.IS",
+      "name": "Aselsan",
+      "country": "TR",
+      "sector": "Industrials",
+      "usd": 3470000000000,
+      "fun": "Türkiye's biggest defence electronics maker."
+    },
+    {
+      "id": "AIR.PA",
+      "name": "Airbus",
+      "country": "FR",
+      "sector": "Industrials",
+      "usd": 3320000000000
+    },
+    {
+      "id": "2308.TW",
+      "name": "Delta Electronics",
+      "country": "TW",
+      "sector": "Industrials",
+      "usd": 3320000000000
+    },
+    {
+      "id": "MRNA",
+      "name": "Moderna",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 3270000000000
+    },
+    {
+      "id": "PUM.DE",
+      "name": "Puma",
+      "country": "DE",
+      "sector": "Consumer",
+      "usd": 3200000000000
+    },
+    {
+      "id": "RL",
+      "name": "Ralph Lauren",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 3140000000000
+    },
+    {
+      "id": "DUOL",
+      "name": "Duolingo",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 2690000000000
+    },
+    {
+      "id": "AON",
+      "name": "Aon",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 2660000000000
+    },
+    {
+      "id": "BHARTIARTL.NS",
+      "name": "Bharti Airtel",
+      "country": "IN",
+      "sector": "Telecom",
+      "usd": 2500000000000
+    },
+    {
+      "id": "CBA.AX",
+      "name": "Commonwealth Bank",
+      "country": "AU",
+      "sector": "Finance",
+      "usd": 2450000000000
+    },
+    {
+      "id": "JNJ",
+      "name": "Johnson & Johnson",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 2370000000000
+    },
+    {
+      "id": "HLT",
+      "name": "Hilton",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 2370000000000
+    },
+    {
+      "id": "LRCX",
+      "name": "Lam Research",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 2300000000000
+    },
+    {
+      "id": "BRBY.L",
+      "name": "Burberry",
+      "country": "GB",
+      "sector": "Consumer",
+      "usd": 2240000000000
+    },
+    {
+      "id": "CTAS",
+      "name": "Cintas",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 2210000000000
+    },
+    {
+      "id": "MMC",
+      "name": "Marsh McLennan",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 2180000000000
+    },
+    {
+      "id": "6501.T",
+      "name": "Hitachi",
+      "country": "JP",
+      "sector": "Industrials",
+      "usd": 2150000000000
+    },
+    {
+      "id": "LYFT",
+      "name": "Lyft",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 2140000000000
+    },
+    {
+      "id": "DGE.L",
+      "name": "Diageo",
+      "country": "GB",
+      "sector": "Consumer",
+      "usd": 2070000000000
+    },
+    {
+      "id": "9697.T",
+      "name": "Capcom",
+      "country": "JP",
+      "sector": "Media",
+      "usd": 2000000000000
+    },
+    {
+      "id": "TCS.NS",
+      "name": "TCS",
+      "country": "IN",
+      "sector": "Technology",
+      "usd": 1990000000000
+    },
+    {
+      "id": "HSBA.L",
+      "name": "HSBC",
+      "country": "GB",
+      "sector": "Finance",
+      "usd": 1830000000000
+    },
+    {
+      "id": "PANW",
+      "name": "Palo Alto Networks",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 1770000000000
+    },
+    {
+      "id": "RMS.PA",
+      "name": "Hermès",
+      "country": "FR",
+      "sector": "Consumer",
+      "usd": 1770000000000,
+      "fun": "A single Birkin bag can cost more than a car."
+    },
+    {
+      "id": "NFLX",
+      "name": "Netflix",
+      "country": "US",
+      "sector": "Media",
+      "usd": 1750000000000,
+      "fun": "Once mailed DVDs in red envelopes."
+    },
+    {
+      "id": "300750.SZ",
+      "name": "CATL",
+      "country": "CN",
+      "sector": "Industrials",
+      "usd": 1740000000000
+    },
+    {
+      "id": "EKGYO.IS",
+      "name": "Emlak Konut",
+      "country": "TR",
+      "sector": "Real Estate",
+      "usd": 1670000000000
+    },
+    {
+      "id": "005380.KS",
+      "name": "Hyundai Motor",
+      "country": "KR",
+      "sector": "Automotive",
+      "usd": 1620000000000
+    },
+    {
+      "id": "FROTO.IS",
+      "name": "Ford Otosan",
+      "country": "TR",
+      "sector": "Automotive",
+      "usd": 1620000000000
+    },
+    {
+      "id": "TGT",
+      "name": "Target",
+      "country": "US",
+      "sector": "Retail",
+      "usd": 1600000000000
+    },
+    {
+      "id": "BARC.L",
+      "name": "Barclays",
+      "country": "GB",
+      "sector": "Finance",
+      "usd": 1580000000000
+    },
+    {
+      "id": "TATAMOTORS.NS",
+      "name": "Tata Motors",
+      "country": "IN",
+      "sector": "Automotive",
+      "usd": 1520000000000
+    },
+    {
+      "id": "PINS",
+      "name": "Pinterest",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 1480000000000
+    },
+    {
+      "id": "SIE.DE",
+      "name": "Siemens",
+      "country": "DE",
+      "sector": "Industrials",
+      "usd": 1370000000000
+    },
+    {
+      "id": "EZJ.L",
+      "name": "easyJet",
+      "country": "GB",
+      "sector": "Industrials",
+      "usd": 1360000000000
+    },
+    {
+      "id": "NEE",
+      "name": "NextEra Energy",
+      "country": "US",
+      "sector": "Energy",
+      "usd": 1300000000000
+    },
+    {
+      "id": "VAKBN.IS",
+      "name": "VakıfBank",
+      "country": "TR",
+      "sector": "Finance",
+      "usd": 1250000000000
+    },
+    {
+      "id": "1180.SR",
+      "name": "Saudi National Bank",
+      "country": "SA",
+      "sector": "Finance",
+      "usd": 1170000000000
+    },
+    {
+      "id": "1120.SR",
+      "name": "Al Rajhi Bank",
+      "country": "SA",
+      "sector": "Finance",
+      "usd": 1110000000000
+    },
+    {
+      "id": "BRK-B",
+      "name": "Berkshire Hathaway",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 1090000000000,
+      "fun": "Warren Buffett's holding company; owns Dairy Queen and Geico."
+    },
+    {
+      "id": "TCELL.IS",
+      "name": "Turkcell",
+      "country": "TR",
+      "sector": "Telecom",
+      "usd": 1060000000000
+    },
+    {
+      "id": "RELIANCE.NS",
+      "name": "Reliance Industries",
+      "country": "IN",
+      "sector": "Energy",
+      "usd": 1050000000000,
+      "fun": "From oil refineries to India's biggest mobile network."
+    },
+    {
+      "id": "PGSUS.IS",
+      "name": "Pegasus",
+      "country": "TR",
+      "sector": "Industrials",
+      "usd": 1050000000000,
+      "fun": "Low-cost rival flying from Istanbul's Sabiha airport."
+    },
+    {
+      "id": "BTC-USD",
+      "name": "Bitcoin",
+      "country": "CRYPTO",
+      "sector": "Crypto",
+      "usd": 994000000000,
+      "fun": "The first cryptocurrency, capped at 21 million coins.",
+      "kind": "crypto"
+    },
+    {
+      "id": "ORCL",
+      "name": "Oracle",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 763000000000
+    },
+    {
+      "id": "VZ",
+      "name": "Verizon",
+      "country": "US",
+      "sector": "Telecom",
+      "usd": 713000000000
+    },
+    {
+      "id": "FDX",
+      "name": "FedEx",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 676000000000
+    },
+    {
+      "id": "TTE.PA",
+      "name": "TotalEnergies",
+      "country": "FR",
+      "sector": "Energy",
+      "usd": 645000000000
+    },
+    {
+      "id": "BYND",
+      "name": "Beyond Meat",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 631000000000
+    },
+    {
+      "id": "GM",
+      "name": "General Motors",
+      "country": "US",
+      "sector": "Automotive",
+      "usd": 629000000000
+    },
+    {
+      "id": "MAR",
+      "name": "Marriott",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 618000000000
+    },
+    {
+      "id": "DUK",
+      "name": "Duke Energy",
+      "country": "US",
+      "sector": "Energy",
+      "usd": 616000000000
+    },
+    {
+      "id": "LHA.DE",
+      "name": "Lufthansa",
+      "country": "DE",
+      "sector": "Industrials",
+      "usd": 606000000000
+    },
+    {
+      "id": "ENEL.MI",
+      "name": "Enel",
+      "country": "IT",
+      "sector": "Energy",
+      "usd": 587000000000
+    },
+    {
+      "id": "BIDU",
+      "name": "Baidu",
+      "country": "CN",
+      "sector": "Technology",
+      "usd": 559000000000
+    },
+    {
+      "id": "KRDMD.IS",
+      "name": "Kardemir",
+      "country": "TR",
+      "sector": "Materials",
+      "usd": 520000000000
+    },
+    {
+      "id": "7203.T",
+      "name": "Toyota",
+      "country": "JP",
+      "sector": "Automotive",
+      "usd": 511000000000,
+      "fun": "Sells more cars than any other company most years."
+    },
+    {
+      "id": "PRX.AS",
+      "name": "Prosus",
+      "country": "NL",
+      "sector": "Technology",
+      "usd": 511000000000
+    },
+    {
+      "id": "PYPL",
+      "name": "PayPal",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 502000000000
+    },
+    {
+      "id": "9983.T",
+      "name": "Fast Retailing",
+      "country": "JP",
+      "sector": "Consumer",
+      "usd": 502000000000
+    },
+    {
+      "id": "AF.PA",
+      "name": "Air France-KLM",
+      "country": "FR",
+      "sector": "Industrials",
+      "usd": 491000000000
+    },
+    {
+      "id": "TD.TO",
+      "name": "TD Bank",
+      "country": "CA",
+      "sector": "Finance",
+      "usd": 490000000000
+    },
+    {
+      "id": "UAA",
+      "name": "Under Armour",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 455000000000
+    },
+    {
+      "id": "ZM",
+      "name": "Zoom",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 453000000000
+    },
+    {
+      "id": "DG",
+      "name": "Dollar General",
+      "country": "US",
+      "sector": "Retail",
+      "usd": 446000000000
+    },
+    {
+      "id": "CDW",
+      "name": "CDW",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 443000000000
+    },
+    {
+      "id": "NESN.SW",
+      "name": "Nestlé",
+      "country": "CH",
+      "sector": "Consumer",
+      "usd": 442000000000
+    },
+    {
+      "id": "UCG.MI",
+      "name": "UniCredit",
+      "country": "IT",
+      "sector": "Finance",
+      "usd": 431000000000
+    },
+    {
+      "id": "TPR",
+      "name": "Tapestry",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 411000000000
+    },
+    {
+      "id": "IT",
+      "name": "Gartner",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 405000000000
+    },
+    {
+      "id": "BLK",
+      "name": "BlackRock",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 401000000000
+    },
+    {
+      "id": "SAHOL.IS",
+      "name": "Sabancı Holding",
+      "country": "TR",
+      "sector": "Finance",
+      "usd": 399000000000
+    },
+    {
+      "id": "NKE",
+      "name": "Nike",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 384000000000
+    },
+    {
+      "id": "AVGO",
+      "name": "Broadcom",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 379000000000
+    },
+    {
+      "id": "MMM",
+      "name": "3M",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 370000000000
+    },
+    {
+      "id": "CTSH",
+      "name": "Cognizant",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 367000000000
+    },
+    {
+      "id": "ITX.MC",
+      "name": "Inditex",
+      "country": "ES",
+      "sector": "Consumer",
+      "usd": 358000000000,
+      "fun": "Zara's parent refreshes store stock twice a week."
+    },
+    {
+      "id": "DHR",
+      "name": "Danaher",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 355000000000
+    },
+    {
+      "id": "TUPRS.IS",
+      "name": "Tüpraş",
+      "country": "TR",
+      "sector": "Energy",
+      "usd": 353000000000
+    },
+    {
+      "id": "PM",
+      "name": "Philip Morris",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 349000000000
+    },
+    {
+      "id": "BMW.DE",
+      "name": "BMW",
+      "country": "DE",
+      "sector": "Automotive",
+      "usd": 349000000000
+    },
+    {
+      "id": "KCHOL.IS",
+      "name": "Koç Holding",
+      "country": "TR",
+      "sector": "Finance",
+      "usd": 344000000000
+    },
+    {
+      "id": "ICICIBANK.NS",
+      "name": "ICICI Bank",
+      "country": "IN",
+      "sector": "Finance",
+      "usd": 340000000000
+    },
+    {
+      "id": "HAS",
+      "name": "Hasbro",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 332000000000
+    },
+    {
+      "id": "RYAAY",
+      "name": "Ryanair",
+      "country": "IE",
+      "sector": "Industrials",
+      "usd": 324000000000,
+      "fun": "Europe's biggest budget airline by passengers."
+    },
+    {
+      "id": "SOL-USD",
+      "name": "Solana",
+      "country": "CRYPTO",
+      "sector": "Crypto",
+      "usd": 323000000000,
+      "kind": "crypto"
+    },
+    {
+      "id": "0857.HK",
+      "name": "PetroChina",
+      "country": "CN",
+      "sector": "Energy",
+      "usd": 314000000000
+    },
+    {
+      "id": "ADP",
+      "name": "Automatic Data Processing",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 302000000000
+    },
+    {
+      "id": "MSFT",
+      "name": "Microsoft",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 284000000000,
+      "fun": "Windows and Azure power a huge share of office computers."
+    },
+    {
+      "id": "HSY",
+      "name": "Hershey",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 270000000000
+    },
+    {
+      "id": "3988.HK",
+      "name": "Bank of China",
+      "country": "CN",
+      "sector": "Finance",
+      "usd": 259000000000
+    },
+    {
+      "id": "MNST",
+      "name": "Monster Beverage",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 259000000000
+    },
+    {
+      "id": "K",
+      "name": "Kellogg",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 254000000000
+    },
+    {
+      "id": "NEM",
+      "name": "Newmont",
+      "country": "US",
+      "sector": "Materials",
+      "usd": 249000000000
+    },
+    {
+      "id": "VALE",
+      "name": "Vale",
+      "country": "BR",
+      "sector": "Materials",
+      "usd": 245000000000
+    },
+    {
+      "id": "0700.HK",
+      "name": "Tencent",
+      "country": "CN",
+      "sector": "Technology",
+      "usd": 241000000000
+    },
+    {
+      "id": "EOG",
+      "name": "EOG Resources",
+      "country": "US",
+      "sector": "Energy",
+      "usd": 230000000000
+    },
+    {
+      "id": "EMAAR.DU",
+      "name": "Emaar Properties",
+      "country": "AE",
+      "sector": "Real Estate",
+      "usd": 227000000000
+    },
+    {
+      "id": "TMO",
+      "name": "Thermo Fisher",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 219000000000
+    },
+    {
+      "id": "LLY",
+      "name": "Eli Lilly",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 214000000000
+    },
+    {
+      "id": "ULVR.L",
+      "name": "Unilever",
+      "country": "GB",
+      "sector": "Consumer",
+      "usd": 214000000000
+    },
+    {
+      "id": "ICE",
+      "name": "Intercontinental Exchange",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 208000000000
+    },
+    {
+      "id": "SLB",
+      "name": "Schlumberger",
+      "country": "US",
+      "sector": "Energy",
+      "usd": 205000000000
+    },
+    {
+      "id": "DASH",
+      "name": "DoorDash",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 196000000000
+    },
+    {
+      "id": "AMGN",
+      "name": "Amgen",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 190000000000
+    },
+    {
+      "id": "GOOGL",
+      "name": "Alphabet",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 183000000000,
+      "fun": "Google's parent makes almost all its money from ads."
+    },
+    {
+      "id": "EBAY",
+      "name": "eBay",
+      "country": "US",
+      "sector": "Retail",
+      "usd": 183000000000
+    },
+    {
+      "id": "SASA.IS",
+      "name": "Sasa Polyester",
+      "country": "TR",
+      "sector": "Materials",
+      "usd": 180000000000
+    },
+    {
+      "id": "VRTX",
+      "name": "Vertex",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 180000000000
+    },
+    {
+      "id": "F",
+      "name": "Ford",
+      "country": "US",
+      "sector": "Automotive",
+      "usd": 179000000000
+    },
+    {
+      "id": "RBLX",
+      "name": "Roblox",
+      "country": "US",
+      "sector": "Media",
+      "usd": 175000000000,
+      "fun": "Players build whole worlds block by block."
+    },
+    {
+      "id": "BHP.AX",
+      "name": "BHP",
+      "country": "AU",
+      "sector": "Materials",
+      "usd": 162000000000
+    },
+    {
+      "id": "8306.T",
+      "name": "Mitsubishi UFJ",
+      "country": "JP",
+      "sector": "Finance",
+      "usd": 157000000000
+    },
+    {
+      "id": "207940.KS",
+      "name": "Samsung Biologics",
+      "country": "KR",
+      "sector": "Healthcare",
+      "usd": 150000000000
+    },
+    {
+      "id": "STLA",
+      "name": "Stellantis",
+      "country": "IT",
+      "sector": "Automotive",
+      "usd": 138000000000,
+      "fun": "Owns Jeep, Peugeot and Fiat under one roof."
+    },
+    {
+      "id": "P911.DE",
+      "name": "Porsche",
+      "country": "DE",
+      "sector": "Automotive",
+      "usd": 138000000000
+    },
+    {
+      "id": "EREGL.IS",
+      "name": "Ereğli Demir Çelik",
+      "country": "TR",
+      "sector": "Materials",
+      "usd": 137000000000
+    },
+    {
+      "id": "GS",
+      "name": "Goldman Sachs",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 136000000000
+    },
+    {
+      "id": "BMY",
+      "name": "Bristol Myers",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 136000000000
+    },
+    {
+      "id": "SBUX",
+      "name": "Starbucks",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 128000000000,
+      "fun": "Its coffee cups carry first names, often misspelled."
+    },
+    {
+      "id": "ROG.SW",
+      "name": "Roche",
+      "country": "CH",
+      "sector": "Healthcare",
+      "usd": 125000000000
+    },
+    {
+      "id": "GE",
+      "name": "General Electric",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 121000000000
+    },
+    {
+      "id": "HON",
+      "name": "Honeywell",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 116000000000
+    },
+    {
+      "id": "UNP",
+      "name": "Union Pacific",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 115000000000
+    },
+    {
+      "id": "DKNG",
+      "name": "DraftKings",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 114000000000
+    },
+    {
+      "id": "SQ",
+      "name": "Block",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 107000000000
+    },
+    {
+      "id": "AXP",
+      "name": "American Express",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 96700000000
+    },
+    {
+      "id": "SPOT",
+      "name": "Spotify",
+      "country": "US",
+      "sector": "Media",
+      "usd": 94100000000,
+      "fun": "Music streaming with Wrapped every December."
+    },
+    {
+      "id": "000660.KS",
+      "name": "SK Hynix",
+      "country": "KR",
+      "sector": "Technology",
+      "usd": 93800000000
+    },
+    {
+      "id": "CMG",
+      "name": "Chipotle",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 91500000000
+    },
+    {
+      "id": "MCD",
+      "name": "McDonald's",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 89800000000,
+      "fun": "Serves 69 million customers a day."
+    },
+    {
+      "id": "HD",
+      "name": "Home Depot",
+      "country": "US",
+      "sector": "Retail",
+      "usd": 88900000000
+    },
+    {
+      "id": "WMT",
+      "name": "Walmart",
+      "country": "US",
+      "sector": "Retail",
+      "usd": 82800000000,
+      "fun": "The world's largest private employer."
+    },
+    {
+      "id": "ETSY",
+      "name": "Etsy",
+      "country": "US",
+      "sector": "Retail",
+      "usd": 81800000000
+    },
+    {
+      "id": "COST",
+      "name": "Costco",
+      "country": "US",
+      "sector": "Retail",
+      "usd": 77700000000,
+      "fun": "Sells $5 rotisserie chickens famous on TikTok."
+    },
+    {
+      "id": "ABBV",
+      "name": "AbbVie",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 77000000000
+    },
+    {
+      "id": "PEP",
+      "name": "PepsiCo",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 76500000000
+    },
+    {
+      "id": "ADBE",
+      "name": "Adobe",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 76400000000
+    },
+    {
+      "id": "INTU",
+      "name": "Intuit",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 73700000000
+    },
+    {
+      "id": "XOM",
+      "name": "Exxon Mobil",
+      "country": "US",
+      "sector": "Energy",
+      "usd": 71200000000
+    },
+    {
+      "id": "T",
+      "name": "AT&T",
+      "country": "US",
+      "sector": "Telecom",
+      "usd": 69400000000
+    },
+    {
+      "id": "ETH-USD",
+      "name": "Ethereum",
+      "country": "CRYPTO",
+      "sector": "Crypto",
+      "usd": 67400000000,
+      "fun": "Powers most stablecoins and DeFi apps.",
+      "kind": "crypto"
+    },
+    {
+      "id": "GILD",
+      "name": "Gilead",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 65800000000
+    },
+    {
+      "id": "CELH",
+      "name": "Celsius",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 58400000000
+    },
+    {
+      "id": "WMG",
+      "name": "Warner Music",
+      "country": "US",
+      "sector": "Media",
+      "usd": 58300000000
+    },
+    {
+      "id": "UMG.AS",
+      "name": "Universal Music",
+      "country": "NL",
+      "sector": "Media",
+      "usd": 55900000000
+    },
+    {
+      "id": "ULKER.IS",
+      "name": "Ülker",
+      "country": "TR",
+      "sector": "Consumer",
+      "usd": 54000000000
+    },
+    {
+      "id": "MU",
+      "name": "Micron",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 50600000000
+    },
+    {
+      "id": "TAVHL.IS",
+      "name": "TAV Airports",
+      "country": "TR",
+      "sector": "Industrials",
+      "usd": 50600000000
+    },
+    {
+      "id": "UBER",
+      "name": "Uber",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 50300000000,
+      "fun": "Matches riders and drivers in minutes."
+    },
+    {
+      "id": "COP",
+      "name": "ConocoPhillips",
+      "country": "US",
+      "sector": "Energy",
+      "usd": 48800000000
+    },
+    {
+      "id": "RY.TO",
+      "name": "Royal Bank of Canada",
+      "country": "CA",
+      "sector": "Finance",
+      "usd": 42700000000
+    },
+    {
+      "id": "ADS.DE",
+      "name": "Adidas",
+      "country": "DE",
+      "sector": "Consumer",
+      "usd": 42500000000,
+      "fun": "Three stripes, one giant sportswear rivalry with Nike."
+    },
+    {
+      "id": "7267.T",
+      "name": "Honda",
+      "country": "JP",
+      "sector": "Automotive",
+      "usd": 42000000000
+    },
+    {
+      "id": "WDAY",
+      "name": "Workday",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 41000000000
+    },
+    {
+      "id": "CAT",
+      "name": "Caterpillar",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 39800000000
+    },
+    {
+      "id": "UPS",
+      "name": "UPS",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 38800000000
+    },
+    {
+      "id": "KER.PA",
+      "name": "Kering",
+      "country": "FR",
+      "sector": "Consumer",
+      "usd": 38200000000
+    },
+    {
+      "id": "CSCO",
+      "name": "Cisco",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 36700000000
+    },
+    {
+      "id": "3690.HK",
+      "name": "Meituan",
+      "country": "CN",
+      "sector": "Technology",
+      "usd": 36400000000
+    },
+    {
+      "id": "OTKAR.IS",
+      "name": "Otokar",
+      "country": "TR",
+      "sector": "Automotive",
+      "usd": 36200000000
+    },
+    {
+      "id": "REGN",
+      "name": "Regeneron",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 35000000000
+    },
+    {
+      "id": "ATCO-A.ST",
+      "name": "Atlas Copco",
+      "country": "SE",
+      "sector": "Industrials",
+      "usd": 33300000000
+    },
+    {
+      "id": "PETKM.IS",
+      "name": "Petkim",
+      "country": "TR",
+      "sector": "Materials",
+      "usd": 31800000000
+    },
+    {
+      "id": "JPM",
+      "name": "JPMorgan Chase",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 31500000000
+    },
+    {
+      "id": "000270.KS",
+      "name": "Kia",
+      "country": "KR",
+      "sector": "Automotive",
+      "usd": 30600000000
+    },
+    {
+      "id": "PDD",
+      "name": "PDD Holdings",
+      "country": "CN",
+      "sector": "Retail",
+      "usd": 29900000000
+    },
+    {
+      "id": "NVDA",
+      "name": "NVIDIA",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 26500000000,
+      "fun": "Its chips power the AI boom."
+    },
+    {
+      "id": "LYV",
+      "name": "Live Nation",
+      "country": "US",
+      "sector": "Media",
+      "usd": 26400000000
+    },
+    {
+      "id": "PG",
+      "name": "Procter & Gamble",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 25900000000
+    },
+    {
+      "id": "BAC",
+      "name": "Bank of America",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 25600000000
+    },
+    {
+      "id": "LUV",
+      "name": "Southwest Airlines",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 24700000000
+    },
+    {
+      "id": "AMZN",
+      "name": "Amazon",
+      "country": "US",
+      "sector": "Retail",
+      "usd": 23800000000,
+      "fun": "Started as an online bookstore in 1994."
+    },
+    {
+      "id": "CMCSA",
+      "name": "Comcast",
+      "country": "US",
+      "sector": "Media",
+      "usd": 23100000000
+    },
+    {
+      "id": "UNH",
+      "name": "UnitedHealth",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 22100000000
+    },
+    {
+      "id": "LT.NS",
+      "name": "Larsen & Toubro",
+      "country": "IN",
+      "sector": "Industrials",
+      "usd": 22100000000
+    },
+    {
+      "id": "1211.HK",
+      "name": "BYD",
+      "country": "CN",
+      "sector": "Automotive",
+      "usd": 21600000000
+    },
+    {
+      "id": "ASML",
+      "name": "ASML",
+      "country": "NL",
+      "sector": "Technology",
+      "usd": 21200000000,
+      "fun": "The only company that makes the machines for cutting-edge chips."
+    },
+    {
+      "id": "GARAN.IS",
+      "name": "Garanti BBVA",
+      "country": "TR",
+      "sector": "Finance",
+      "usd": 19800000000
+    },
+    {
+      "id": "AZN",
+      "name": "AstraZeneca",
+      "country": "GB",
+      "sector": "Healthcare",
+      "usd": 18300000000
+    },
+    {
+      "id": "ENKAI.IS",
+      "name": "Enka İnşaat",
+      "country": "TR",
+      "sector": "Industrials",
+      "usd": 18300000000
+    },
+    {
+      "id": "MBG.DE",
+      "name": "Mercedes-Benz",
+      "country": "DE",
+      "sector": "Automotive",
+      "usd": 18200000000
+    },
+    {
+      "id": "DAL",
+      "name": "Delta Air Lines",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 18100000000
+    },
+    {
+      "id": "PTON",
+      "name": "Peloton",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 18100000000
+    },
+    {
+      "id": "ETN",
+      "name": "Eaton",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 17900000000
+    },
+    {
+      "id": "TSM",
+      "name": "TSMC",
+      "country": "TW",
+      "sector": "Technology",
+      "usd": 17800000000,
+      "fun": "Makes chips for Apple, NVIDIA and AMD."
+    },
+    {
+      "id": "HOOD",
+      "name": "Robinhood",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 16800000000
+    },
+    {
+      "id": "NOW",
+      "name": "ServiceNow",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 15800000000
+    },
+    {
+      "id": "CRWD",
+      "name": "CrowdStrike",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 15000000000
+    },
+    {
+      "id": "DIS",
+      "name": "Disney",
+      "country": "US",
+      "sector": "Media",
+      "usd": 14700000000,
+      "fun": "Mickey Mouse is nearly 100 years old."
+    },
+    {
+      "id": "CFR.SW",
+      "name": "Richemont",
+      "country": "CH",
+      "sector": "Consumer",
+      "usd": 13800000000
+    },
+    {
+      "id": "SNAP",
+      "name": "Snap",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 13700000000
+    },
+    {
+      "id": "META",
+      "name": "Meta",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 13000000000,
+      "fun": "Facebook, Instagram and WhatsApp under one roof."
+    },
+    {
+      "id": "TXN",
+      "name": "Texas Instruments",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 12700000000
+    },
+    {
+      "id": "INTC",
+      "name": "Intel",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 12500000000
+    },
+    {
+      "id": "SAP.DE",
+      "name": "SAP",
+      "country": "DE",
+      "sector": "Technology",
+      "usd": 12100000000
+    },
+    {
+      "id": "FI",
+      "name": "Fiserv",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 11000000000
+    },
+    {
+      "id": "6367.T",
+      "name": "Daikin",
+      "country": "JP",
+      "sector": "Industrials",
+      "usd": 10200000000
+    },
+    {
+      "id": "8035.T",
+      "name": "Tokyo Electron",
+      "country": "JP",
+      "sector": "Technology",
+      "usd": 9920000000
+    },
+    {
+      "id": "AKBNK.IS",
+      "name": "Akbank",
+      "country": "TR",
+      "sector": "Finance",
+      "usd": 9890000000
+    },
+    {
+      "id": "CB",
+      "name": "Chubb",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 9860000000
+    },
+    {
+      "id": "MAT",
+      "name": "Mattel",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 8810000000
+    },
+    {
+      "id": "UBI.PA",
+      "name": "Ubisoft",
+      "country": "FR",
+      "sector": "Media",
+      "usd": 8170000000
+    },
+    {
+      "id": "1398.HK",
+      "name": "ICBC",
+      "country": "CN",
+      "sector": "Finance",
+      "usd": 7960000000
+    },
+    {
+      "id": "RDDT",
+      "name": "Reddit",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 7930000000
+    },
+    {
+      "id": "IBM",
+      "name": "IBM",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 7600000000
+    },
+    {
+      "id": "PFE",
+      "name": "Pfizer",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 7570000000
+    },
+    {
+      "id": "ADI",
+      "name": "Analog Devices",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 6920000000
+    },
+    {
+      "id": "ALV.DE",
+      "name": "Allianz",
+      "country": "DE",
+      "sector": "Finance",
+      "usd": 6880000000
+    },
+    {
+      "id": "BSX",
+      "name": "Boston Scientific",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 6810000000
+    },
+    {
+      "id": "LEVI",
+      "name": "Levi Strauss",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 6680000000
+    },
+    {
+      "id": "MRK",
+      "name": "Merck",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 6650000000
+    },
+    {
+      "id": "LIN",
+      "name": "Linde",
+      "country": "GB",
+      "sector": "Industrials",
+      "usd": 6530000000
+    },
+    {
+      "id": "DE",
+      "name": "Deere",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 6360000000
+    },
+    {
+      "id": "JCI",
+      "name": "Johnson Controls",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 6240000000
+    },
+    {
+      "id": "PLD",
+      "name": "Prologis",
+      "country": "US",
+      "sector": "Real Estate",
+      "usd": 6120000000
+    },
+    {
+      "id": "DELL",
+      "name": "Dell",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 5670000000
+    },
+    {
+      "id": "PARA",
+      "name": "Paramount",
+      "country": "US",
+      "sector": "Media",
+      "usd": 5470000000
+    },
+    {
+      "id": "SHOP.TO",
+      "name": "Shopify (Toronto)",
+      "country": "CA",
+      "sector": "Technology",
+      "usd": 4770000000,
+      "fun": "Ottawa-born shop software used by millions of stores."
+    },
+    {
+      "id": "ACN",
+      "name": "Accenture",
+      "country": "IE",
+      "sector": "Technology",
+      "usd": 4700000000
+    },
+    {
+      "id": "WBD",
+      "name": "Warner Bros Discovery",
+      "country": "US",
+      "sector": "Media",
+      "usd": 4640000000
+    },
+    {
+      "id": "D05.SI",
+      "name": "DBS Group",
+      "country": "SG",
+      "sector": "Finance",
+      "usd": 4580000000
+    },
+    {
+      "id": "MDT",
+      "name": "Medtronic",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 4520000000
+    },
+    {
+      "id": "HCA",
+      "name": "HCA Healthcare",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 4250000000
+    },
+    {
+      "id": "UAL",
+      "name": "United Airlines",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 4040000000
+    },
+    {
+      "id": "KOZAL.IS",
+      "name": "Koza Altın",
+      "country": "TR",
+      "sector": "Materials",
+      "usd": 4020000000
+    },
+    {
+      "id": "EA",
+      "name": "Electronic Arts",
+      "country": "US",
+      "sector": "Media",
+      "usd": 3990000000
+    },
+    {
+      "id": "ABT",
+      "name": "Abbott",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 3720000000
+    },
+    {
+      "id": "7974.T",
+      "name": "Nintendo",
+      "country": "JP",
+      "sector": "Media",
+      "usd": 3660000000,
+      "fun": "Mario's home: in business for 135+ years."
+    },
+    {
+      "id": "BKNG",
+      "name": "Booking Holdings",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 3530000000
+    },
+    {
+      "id": "KHC",
+      "name": "Kraft Heinz",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 3480000000
+    },
+    {
+      "id": "9984.T",
+      "name": "SoftBank",
+      "country": "JP",
+      "sector": "Finance",
+      "usd": 3160000000
+    },
+    {
+      "id": "IBE.MC",
+      "name": "Iberdrola",
+      "country": "ES",
+      "sector": "Energy",
+      "usd": 2960000000
+    },
+    {
+      "id": "NOVO-B.CO",
+      "name": "Novo Nordisk",
+      "country": "DK",
+      "sector": "Healthcare",
+      "usd": 2810000000
+    },
+    {
+      "id": "YUM",
+      "name": "Yum! Brands",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 2790000000
+    },
+    {
+      "id": "COIN",
+      "name": "Coinbase",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 2770000000
+    },
+    {
+      "id": "SHW",
+      "name": "Sherwin-Williams",
+      "country": "US",
+      "sector": "Materials",
+      "usd": 2750000000
+    },
+    {
+      "id": "BIMAS.IS",
+      "name": "BİM",
+      "country": "TR",
+      "sector": "Retail",
+      "usd": 2640000000,
+      "fun": "Türkiye's largest discount grocer."
+    },
+    {
+      "id": "AMD",
+      "name": "AMD",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 2620000000
+    },
+    {
+      "id": "TTKOM.IS",
+      "name": "Türk Telekom",
+      "country": "TR",
+      "sector": "Telecom",
+      "usd": 2620000000
+    },
+    {
+      "id": "MC.PA",
+      "name": "LVMH",
+      "country": "FR",
+      "sector": "Consumer",
+      "usd": 2360000000,
+      "fun": "Owns Louis Vuitton, Dior and Sephora."
+    },
+    {
+      "id": "SHOP",
+      "name": "Shopify",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 2310000000
+    },
+    {
+      "id": "HALKB.IS",
+      "name": "Halkbank",
+      "country": "TR",
+      "sector": "Finance",
+      "usd": 2200000000
+    },
+    {
+      "id": "RACE",
+      "name": "Ferrari",
+      "country": "IT",
+      "sector": "Automotive",
+      "usd": 2160000000,
+      "fun": "Makes about 14,000 cars a year — on purpose."
+    },
+    {
+      "id": "005930.KS",
+      "name": "Samsung Electronics",
+      "country": "KR",
+      "sector": "Technology",
+      "usd": 2060000000,
+      "fun": "Makes the phone in your pocket and the chip inside it."
+    },
+    {
+      "id": "2454.TW",
+      "name": "MediaTek",
+      "country": "TW",
+      "sector": "Technology",
+      "usd": 1910000000
+    },
+    {
+      "id": "TOASO.IS",
+      "name": "Tofaş",
+      "country": "TR",
+      "sector": "Automotive",
+      "usd": 1840000000
+    },
+    {
+      "id": "HPQ",
+      "name": "HP",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 1800000000
+    },
+    {
+      "id": "ISCTR.IS",
+      "name": "İş Bankası",
+      "country": "TR",
+      "sector": "Finance",
+      "usd": 1780000000
+    },
+    {
+      "id": "TSLA",
+      "name": "Tesla",
+      "country": "US",
+      "sector": "Automotive",
+      "usd": 1760000000,
+      "fun": "Worth more than most carmakers combined at its peak."
+    },
+    {
+      "id": "3659.T",
+      "name": "Nexon",
+      "country": "JP",
+      "sector": "Media",
+      "usd": 1710000000,
+      "fun": "Makes MapleStory and Dungeon&Fighter."
+    },
+    {
+      "id": "NTDOY",
+      "name": "Nintendo",
+      "country": "JP",
+      "sector": "Media",
+      "usd": 1610000000
+    },
+    {
+      "id": "TTWO",
+      "name": "Take-Two",
+      "country": "US",
+      "sector": "Media",
+      "usd": 1590000000
+    },
+    {
+      "id": "9432.T",
+      "name": "NTT",
+      "country": "JP",
+      "sector": "Telecom",
+      "usd": 1530000000
+    },
+    {
+      "id": "EMIRATESNBD.DU",
+      "name": "Emirates NBD",
+      "country": "AE",
+      "sector": "Finance",
+      "usd": 1530000000
+    },
+    {
+      "id": "ECL",
+      "name": "Ecolab",
+      "country": "US",
+      "sector": "Materials",
+      "usd": 1490000000
+    },
+    {
+      "id": "0941.HK",
+      "name": "China Mobile",
+      "country": "CN",
+      "sector": "Telecom",
+      "usd": 1380000000
+    },
+    {
+      "id": "600519.SS",
+      "name": "Kweichow Moutai",
+      "country": "CN",
+      "sector": "Consumer",
+      "usd": 1330000000,
+      "fun": "Makes the fiery liquor drunk at every Chinese banquet."
+    },
+    {
+      "id": "035420.KS",
+      "name": "Naver",
+      "country": "KR",
+      "sector": "Technology",
+      "usd": 1310000000
+    },
+    {
+      "id": "CME",
+      "name": "CME Group",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 1310000000
+    },
+    {
+      "id": "ELV",
+      "name": "Elevance Health",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 1260000000
+    },
+    {
+      "id": "JD",
+      "name": "JD.com",
+      "country": "CN",
+      "sector": "Retail",
+      "usd": 1250000000
+    },
+    {
+      "id": "HDFCBANK.NS",
+      "name": "HDFC Bank",
+      "country": "IN",
+      "sector": "Finance",
+      "usd": 1250000000
+    },
+    {
+      "id": "0939.HK",
+      "name": "China Construction Bank",
+      "country": "CN",
+      "sector": "Finance",
+      "usd": 1220000000
+    },
+    {
+      "id": "MGROS.IS",
+      "name": "Migros",
+      "country": "TR",
+      "sector": "Retail",
+      "usd": 1100000000
+    },
+    {
+      "id": "YKBNK.IS",
+      "name": "Yapı Kredi",
+      "country": "TR",
+      "sector": "Finance",
+      "usd": 1060000000
+    },
+    {
+      "id": "BBY",
+      "name": "Best Buy",
+      "country": "US",
+      "sector": "Retail",
+      "usd": 1000000000
+    },
+    {
+      "id": "DDOG",
+      "name": "Datadog",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 995000000
+    },
+    {
+      "id": "BP.L",
+      "name": "BP",
+      "country": "GB",
+      "sector": "Energy",
+      "usd": 978000000
+    },
+    {
+      "id": "ITW",
+      "name": "Illinois Tool Works",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 911000000
+    },
+    {
+      "id": "SOKM.IS",
+      "name": "Şok Marketler",
+      "country": "TR",
+      "sector": "Retail",
+      "usd": 897000000
+    },
+    {
+      "id": "SISE.IS",
+      "name": "Şişecam",
+      "country": "TR",
+      "sector": "Materials",
+      "usd": 891000000
+    },
+    {
+      "id": "WFC",
+      "name": "Wells Fargo",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 866000000
+    },
+    {
+      "id": "VESTL.IS",
+      "name": "Vestel",
+      "country": "TR",
+      "sector": "Technology",
+      "usd": 851000000
+    },
+    {
+      "id": "AAL",
+      "name": "American Airlines",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 839000000
+    },
+    {
+      "id": "AAPL",
+      "name": "Apple",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 818000000,
+      "fun": "Makes the iPhone, which outsells most companies' entire output."
+    },
+    {
+      "id": "MA",
+      "name": "Mastercard",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 817000000
+    },
+    {
+      "id": "INFY.NS",
+      "name": "Infosys",
+      "country": "IN",
+      "sector": "Technology",
+      "usd": 805000000
+    },
+    {
+      "id": "BNP.PA",
+      "name": "BNP Paribas",
+      "country": "FR",
+      "sector": "Finance",
+      "usd": 800000000
+    },
+    {
+      "id": "CRM",
+      "name": "Salesforce",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 781000000
+    },
+    {
+      "id": "VOW.DE",
+      "name": "Volkswagen",
+      "country": "DE",
+      "sector": "Automotive",
+      "usd": 758000000
+    },
+    {
+      "id": "QCOM",
+      "name": "Qualcomm",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 753000000
+    },
+    {
+      "id": "CL",
+      "name": "Colgate-Palmolive",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 733000000
+    },
+    {
+      "id": "SYK",
+      "name": "Stryker",
+      "country": "US",
+      "sector": "Healthcare",
+      "usd": 721000000
+    },
+    {
+      "id": "2222.SR",
+      "name": "Saudi Aramco",
+      "country": "SA",
+      "sector": "Energy",
+      "usd": 705000000,
+      "fun": "The world's most profitable oil company."
+    },
+    {
+      "id": "THYAO.IS",
+      "name": "Turkish Airlines",
+      "country": "TR",
+      "sector": "Industrials",
+      "usd": 698000000,
+      "fun": "Flies to more countries than any other airline."
+    },
+    {
+      "id": "KDP",
+      "name": "Keurig Dr Pepper",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 687000000
+    },
+    {
+      "id": "SAN.PA",
+      "name": "Sanofi",
+      "country": "FR",
+      "sector": "Healthcare",
+      "usd": 675000000
+    },
+    {
+      "id": "GPRO",
+      "name": "GoPro",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 654000000
+    },
+    {
+      "id": "KO",
+      "name": "Coca-Cola",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 623000000,
+      "fun": "Its secret recipe sits in a vault in Atlanta."
+    },
+    {
+      "id": "TME",
+      "name": "Tencent Music",
+      "country": "CN",
+      "sector": "Media",
+      "usd": 600000000
+    },
+    {
+      "id": "OR.PA",
+      "name": "L'Oréal",
+      "country": "FR",
+      "sector": "Consumer",
+      "usd": 595000000
+    },
+    {
+      "id": "SNOW",
+      "name": "Snowflake",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 580000000
+    },
+    {
+      "id": "2318.HK",
+      "name": "Ping An Insurance",
+      "country": "CN",
+      "sector": "Finance",
+      "usd": 580000000
+    },
+    {
+      "id": "PBR",
+      "name": "Petrobras",
+      "country": "BR",
+      "sector": "Energy",
+      "usd": 547000000
+    },
+    {
+      "id": "INVE-B.ST",
+      "name": "Investor AB",
+      "country": "SE",
+      "sector": "Finance",
+      "usd": 509000000,
+      "fun": "Flat-pack furniture in 100+ countries."
+    },
+    {
+      "id": "AMAT",
+      "name": "Applied Materials",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 496000000
+    },
+    {
+      "id": "WM",
+      "name": "Waste Management",
+      "country": "US",
+      "sector": "Industrials",
+      "usd": 465000000
+    },
+    {
+      "id": "PLTR",
+      "name": "Palantir",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 460000000
+    },
+    {
+      "id": "2317.TW",
+      "name": "Foxconn",
+      "country": "TW",
+      "sector": "Technology",
+      "usd": 445000000
+    },
+    {
+      "id": "BABA",
+      "name": "Alibaba",
+      "country": "CN",
+      "sector": "Technology",
+      "usd": 440000000
+    },
+    {
+      "id": "6758.T",
+      "name": "Sony",
+      "country": "JP",
+      "sector": "Technology",
+      "usd": 435000000,
+      "fun": "From Walkman to PlayStation and Spider-Man movies."
+    },
+    {
+      "id": "V",
+      "name": "Visa",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 433000000
+    },
+    {
+      "id": "MDLZ",
+      "name": "Mondelez",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 430000000
+    },
+    {
+      "id": "2082.SR",
+      "name": "ACWA Power",
+      "country": "SA",
+      "sector": "Energy",
+      "usd": 421000000
+    },
+    {
+      "id": "NOVN.SW",
+      "name": "Novartis",
+      "country": "CH",
+      "sector": "Healthcare",
+      "usd": 417000000
+    },
+    {
+      "id": "BNB-USD",
+      "name": "BNB",
+      "country": "CRYPTO",
+      "sector": "Crypto",
+      "usd": 415000000,
+      "kind": "crypto"
+    },
+    {
+      "id": "ABNB",
+      "name": "Airbnb",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 406000000,
+      "fun": "Lets anyone rent out their spare room."
+    },
+    {
+      "id": "XRP-USD",
+      "name": "XRP",
+      "country": "CRYPTO",
+      "sector": "Crypto",
+      "usd": 399000000,
+      "kind": "crypto"
+    },
+    {
+      "id": "GIS",
+      "name": "General Mills",
+      "country": "US",
+      "sector": "Consumer",
+      "usd": 396000000
+    },
+    {
+      "id": "ARCLK.IS",
+      "name": "Arçelik",
+      "country": "TR",
+      "sector": "Consumer",
+      "usd": 391000000
+    },
+    {
+      "id": "373220.KS",
+      "name": "LG Energy Solution",
+      "country": "KR",
+      "sector": "Industrials",
+      "usd": 386000000
+    },
+    {
+      "id": "NIO",
+      "name": "NIO",
+      "country": "CN",
+      "sector": "Automotive",
+      "usd": 379000000
+    },
+    {
+      "id": "DOCU",
+      "name": "DocuSign",
+      "country": "US",
+      "sector": "Technology",
+      "usd": 371000000
+    },
+    {
+      "id": "SHEL",
+      "name": "Shell",
+      "country": "GB",
+      "sector": "Energy",
+      "usd": 370000000
+    },
+    {
+      "id": "6861.T",
+      "name": "Keyence",
+      "country": "JP",
+      "sector": "Industrials",
+      "usd": 351000000
+    },
+    {
+      "id": "8058.T",
+      "name": "Mitsubishi Corp",
+      "country": "JP",
+      "sector": "Industrials",
+      "usd": 337000000
+    },
+    {
+      "id": "CVX",
+      "name": "Chevron",
+      "country": "US",
+      "sector": "Energy",
+      "usd": 323000000
+    },
+    {
+      "id": "1810.HK",
+      "name": "Xiaomi",
+      "country": "CN",
+      "sector": "Technology",
+      "usd": 323000000
+    },
+    {
+      "id": "MS",
+      "name": "Morgan Stanley",
+      "country": "US",
+      "sector": "Finance",
+      "usd": 316000000
+    }
+  ]
+}

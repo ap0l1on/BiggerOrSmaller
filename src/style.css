@@ -304,6 +304,8 @@ main { flex: 1; }
   z-index: 20;
 }
 
+.sheet-backdrop[hidden] { display: none; }
+
 @media (min-width: 640px) {
   .sheet-backdrop { align-items: center; padding: 24px; }
 }
